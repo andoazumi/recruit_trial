@@ -165,13 +165,24 @@ img{
     transition: 0.6s;
 }
 
+//＝＝＝ mv ＝＝＝
+.mv .mv-inner{
+    background: var(--c-black-02);
+    color: var(--c-white);
+    position: relative;
+}
+
+.mv .mv-txt-area{
+    position: absolute;
+}
+
 @media screen and (max-width:767px){
-    //＝＝＝共通＝＝＝
+    //＝＝＝ common ＝＝＝
     .pc{
         display: none;
     }
 
-    //＝＝＝ヘッダー＝＝＝
+    //＝＝＝ header ＝＝＝
     .header{
         background: var(--c-white);
         height: 6rem;
@@ -275,7 +286,6 @@ img{
         margin-top: 1.2rem;
     }
 
-
     // .header.on .menu-btn .btn-line:nth-child(2){
     //     transform:translateY(0.05rem) rotate(45deg);
     // }
@@ -283,6 +293,43 @@ img{
     // .header.on .menu-btn .btn-line:last-child{
     //     transform:translateY(-0.05rem) rotate(-45deg);
     // }
+
+    //＝＝＝ mv ＝＝
+    .mv {
+        height: calc(100vh - 6rem);
+    }
+
+    .mv-inner{
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+    
+    .mv .mv-txt-area{
+        flex: 1;
+        width: 90%;
+        top:34.4rem;
+        // unquote('min(51% ,40.4rem)')
+        // calc(344vh * 100 / 66.9rem)
+        left: 5%; // 20/475
+    }
+
+    .mv .mv-txt-area .mv-txt-1{
+        font-size: 2.5rem;
+        margin-top: 3.2rem;
+    }
+
+    .mv .mv-txt-area .mv-txt-2{
+        font-size: 1.2rem;
+        margin-top: 1rem;
+    }
+
+    .mv .mv-txt-area .mv-txt-3{
+        font-size: 1.4rem;
+        margin-top: 2.9rem;
+        text-align: 2.8rem;
+    }
+
     //＝＝＝＝＝＝
 }
 
@@ -290,14 +337,21 @@ img{
     body{
         background: green;
     }
-    //＝＝＝共通＝＝＝
+    //＝＝＝ common ＝＝＝
     .sp{
         display: none;
     }
 
-    //＝＝＝ヘッダー＝＝＝
+    .wrapper{
+        position: relative;
+    }
+
+    //＝＝＝ header ＝＝＝
     .header{
         height: 10rem;
+        position: absolute;
+        width: 100%;
+        z-index: 1;
     }
 
     .header .logo{
