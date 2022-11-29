@@ -176,6 +176,46 @@ img{
     position: absolute;
 }
 
+.mv .mv-scroll{
+    position: relative;
+}
+
+.mv .mv-scroll::before{
+    content: "";
+    position: absolute;
+    width: 0.1rem;
+    bottom: 0;
+    background: rgba( 255,255,255,0.3);
+}
+
+.mv .mv-scroll::after{
+    content: "";
+    position: absolute;
+    width: 0.1rem;
+    bottom: 0;
+    background: var(--c-white);
+    animation: sdl 1.8s cubic-bezier(1,0,0,1)infinite;
+}
+
+@keyframes sdl {
+    0%{
+        transform: scale(1,0);
+        transform-origin: 0 0;
+    }
+    50%{
+        transform: scale(1,1);
+        transform-origin: 0 0;
+    }
+    51%{
+        transform: scale(1,1);
+        transform-origin: 0 100%;
+    }
+    100%{
+        transform: scale(1,0);
+        transform-origin: 0 100%;
+    }
+}
+
 @media screen and (max-width:767px){
     //＝＝＝ common ＝＝＝
     .pc{
@@ -307,7 +347,7 @@ img{
     
     .mv .mv-txt-area{
         flex: 1;
-        width: 90%;
+        width: 89%;
         top:34.4rem;
         // unquote('min(51% ,40.4rem)')
         // calc(344vh * 100 / 66.9rem)
@@ -328,6 +368,16 @@ img{
         font-size: 1.4rem;
         margin-top: 2.9rem;
         text-align: 2.8rem;
+    }
+
+    .mv .mv-scroll::before{
+        height: 6rem;
+        right: 1.9rem;
+    }
+    
+    .mv .mv-scroll::after{
+        height: 6rem;
+        right: 1.9rem;
     }
 
     //＝＝＝＝＝＝
