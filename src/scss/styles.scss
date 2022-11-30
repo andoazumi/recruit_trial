@@ -167,9 +167,9 @@ img{
 
 //＝＝＝ mv ＝＝＝
 .mv .mv-inner{
-    background: var(--c-black-02);
     color: var(--c-white);
     position: relative;
+    background: var(--c-black-02);
 }
 
 .mv .mv-txt-area{
@@ -384,9 +384,6 @@ img{
 }
 
 @media screen and (min-width:768px){
-    body{
-        background: green;
-    }
     //＝＝＝ common ＝＝＝
     .sp{
         display: none;
@@ -407,6 +404,7 @@ img{
     .header .logo{
         font-size: 2.2rem;
         margin-left: 3.6rem;
+        color: var(--c-white);
     }
 
     .contact{
@@ -574,4 +572,81 @@ img{
     // .header.on .menu-body .header-phone{
     //     padding-left:28%;
     // }
+
+    //＝＝＝ mv ＝＝
+    .mv .mv-inner{
+        display: flex;
+    }
+    
+    .mv picture img{
+        width: 69%;
+        // 1000/1440
+    }
+
+    .mv picture{
+        position: relative;
+    }
+
+    .mv picture::after{
+        content: "";
+        position: absolute;
+        width: 19%;
+        height: 100%;
+        background: var(--c-black-01);
+        right: 31%;
+        opacity: 0.5;
+    }
+    
+    .mv .mv-txt-area{
+        width: 39%;
+        top:16%;
+        // 144/900
+        right: 6%; // 80/1440
+    }
+
+    .mv .img{
+        margin-top: unquote('min(calc(61vw * 100 /1440),6.1rem)');
+        // 61/900
+    }
+    
+    .mv .mv-txt-area .mv-txt-0{
+        font-size: unquote('min(calc(26vw * 100 /1440),2.6rem)');
+    }
+
+    .mv .mv-txt-area .mv-txt-1{
+        font-size: unquote('min(calc(38vw * 100 /1440),3.8rem)');
+        margin-top: unquote('min(calc(60vw * 100 /1440),6rem)');
+    }
+
+    .mv .mv-txt-area .mv-txt-2{
+        font-size: unquote('min(calc(18vw * 100 /1440),1.8rem)');
+        margin-top:unquote('min(calc(20vw * 100 /1440),2rem)') ;
+    }
+
+    .mv .mv-txt-area .mv-txt-3{
+        font-size: unquote('min(calc(16vw * 100 /1440),1.6rem)');
+        margin-top:unquote('min(calc(59vw * 100 /1440),5.9rem)');
+        text-align: 3.2rem;
+    }
+
+    .mv .mv-scroll .pc{
+        color: var(--c-white);
+        position: absolute;
+        right: 12rem;
+        bottom: 6.6rem;
+        margin-right: 3rem;
+    }
+
+    .mv .mv-scroll::before{
+        height: 8rem;
+        right: 12rem;
+    }
+    
+    .mv .mv-scroll::after{
+        height: 8rem;
+        right: 12rem;
+    }
+
+    //＝＝＝  ＝＝
+
 }
