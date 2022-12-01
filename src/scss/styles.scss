@@ -36,6 +36,52 @@ li{
 img{
     width: 100%;
     height: auto;
+    vertical-align: bottom;
+}
+
+.inner{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.title{
+    color: var(--c-navy);
+    position: relative;
+}
+
+.sub-title{
+    color: var(--c-navy);
+    opacity: 0.5;
+}
+
+.title::before{
+    content: "";
+    height: 0.1rem;
+    background: var(--c-navy);
+    position: absolute;
+    left: -2.2rem;
+}
+
+.mini-sub-title{
+    position: relative;
+}
+
+.mini-sub-title::before{
+    content: "";
+    background: var(--c-white);
+    height: 0.1rem;
+    width: 4rem;
+    position: absolute;
+    top: 4rem; // 12 + 28
+
+}
+
+.txt-01{
+    color: var(--c-navy);
+}
+
+.txt-02{
+    color: var(--c-font);
 }
 
 .new-line{
@@ -198,6 +244,16 @@ img{
 }
 
 //＝＝＝ about ＝＝＝
+.about .bg-gray{
+    background: var(--c-gray-01);
+}
+
+.about .pc-right{
+    background: var(--c-navy);
+    color: #FFFFFF;
+}
+
+
 
 @keyframes sdl {
     0%{
@@ -222,6 +278,49 @@ img{
     //＝＝＝ common ＝＝＝
     .pc{
         display: none;
+    }
+
+    .inner{
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+
+    .title{
+        font-size: var(--fz-sp-big);
+    }
+
+    .title::before{
+        width: 1.2rem;
+        top: 8.2rem; // 63 + 19
+    }
+    
+
+    .sub-title{
+        font-size: var(--fz-sp-small);
+        margin-top: 1.1rem;
+    }
+
+    .txt-01{
+        font-size: var(--fz-sp-middle);
+        line-height: 3.6rem;
+    }
+
+    .txt-02{
+        font-size: var(--fz-common-middle);
+        line-height: 3.2rem;
+    }
+
+    .mini-title{
+        font-size: 3.6rem;
+    }
+
+    .mini-sub-title{
+        font-size: 1.2rem;
+    }
+
+    .mini-txt{
+        font-size: 1.4rem;
+        line-height: 2.6rem;
     }
 
     //＝＝＝ header ＝＝＝
@@ -381,6 +480,67 @@ img{
         height: 6rem;
         right: 1.9rem;
     }
+
+    //＝＝＝ about ＝＝＝
+    .about{
+        margin-top: 7.2rem;
+    }
+
+    .about .about-left-tpo .txt-01{
+        margin-top: 4.9rem;
+        width: unquote('min(calc(295vw * 100 / 375),29.5rem)');
+    }
+
+    .about .about-left-tpo .txt-02{
+        margin-top: 3.1rem;
+    }
+
+    .about .bg-gray{
+        margin-top: 7rem;
+        padding-top: 5.4rem;
+        padding-bottom: 6rem;
+    }
+
+    .about .bg-gray .txt-02{
+        margin-top: 2.2rem;
+    }
+
+    .about .pc-right{
+        padding-top: 5.5rem;
+    }
+
+    .about .pc-right .about-01{
+        width: 77%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .about .pc-right .mini-title{
+        margin-top: 2.6rem;
+    }
+
+    .about .pc-right .mini-txt{
+        margin-top: 6.9rem;
+    }
+
+    .about .pc-right .about-02{
+        margin-top: 6rem;
+    }
+
+    .about .about-bottom{
+        margin-top: 4.9rem;
+    }
+
+    .about .about-bottom .txt-01{
+        margin-top: 6.2rem;
+    }
+
+    .about .about-bottom .txt-02{
+        margin-top: 3rem;
+    }
+
+
+
 
     //＝＝＝＝＝＝
 }
