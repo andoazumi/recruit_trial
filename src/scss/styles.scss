@@ -55,7 +55,7 @@
     --fz-sp-middle:2.4rem;
     --fz-sp-big:4.2rem;
     --fz-pc-small:1.3rem;
-    --fz-pc-middle:3.2rem;
+    --fz-pc-middle:2.4rem;
     --fz-pc-big:6rem;
 }
 
@@ -143,10 +143,13 @@ img{
     font-family: lato,sans-serif;
     font-weight: 500;
     letter-spacing: 0.1rem;
+    font-size: 1.2rem;
 }
 
 .mini-txt{
     font-family:HelveticaNeue;
+    font-size: 1.4rem;
+    line-height: 2.6rem;
 }
 
 .new-line{
@@ -398,15 +401,6 @@ img{
         font-size: 3.6rem;
     }
 
-    .mini-sub-title{
-        font-size: 1.2rem;
-    }
-
-    .mini-txt{
-        font-size: 1.4rem;
-        line-height: 2.6rem;
-    }
-
     //＝＝＝ header ＝＝＝
     .header{
         background: var(--c-white);
@@ -572,12 +566,12 @@ img{
         margin-top: 7.2rem;
     }
 
-    .about .about-left-tpo .txt-01{
+    .about .about-left-top .txt-01{
         margin-top: 4.9rem;
         width: unquote('min(calc(295vw * 100 / 375),29.5rem)');
     }
 
-    .about .about-left-tpo .txt-02{
+    .about .about-left-top .txt-02{
         margin-top: 3.1rem;
     }
 
@@ -640,6 +634,43 @@ img{
     .wrapper{
         position: relative;
     }
+
+    .about .pc-left .inner,
+    .about-bottom .inner{
+        margin-left: 12rem;
+        margin-right: 12rem;
+    }
+
+    .title{
+        font-size: var(--fz-pc-big);
+    }
+
+    .title::before{
+        width: 1.2rem;
+        top: 11rem;
+         // 85 + 17 + 8
+    }
+    
+    .sub-title{
+        font-size: var(--fz-pc-small);
+        margin-top: 1.7rem;
+    }
+
+    .txt-01{
+        font-size: var(--fz-pc-middle);
+        line-height: 4.8rem;
+    }
+
+    .txt-02{
+        font-size: var(--fz-common-middle);
+        line-height: 3.2rem;
+    }
+
+    .mini-title{
+        font-size: 4.8rem;
+    }
+
+
 
     //＝＝＝ header ＝＝＝
     .header{
@@ -895,6 +926,108 @@ img{
         height: 8rem;
         right: 12rem;
     }
+
+        //＝＝＝ about ＝＝＝
+        .about .pc-flex{
+            display: flex;
+        }
+        
+        .about .pc-left,
+        .about .pc-right{
+            width: 100%;
+            padding-top: 14.4rem;
+        }
+
+        .about .pc-left .txt-02{
+            width: unquote('min(calc(480vw * 100 / 1440),48rem)');
+        }
+        
+        .about .about-left-top .txt-01{
+            margin-top: 10.9rem;
+            width: unquote('min(calc(393vw * 100 / 1440),39.3rem)');
+            font-size: 3.2rem;
+        }
+        
+        .about .about-left-top .txt-02{
+            margin-top: 4.1rem;
+        }
+        
+        .about .bg-gray{
+            margin-top: 12.7rem;
+            padding-top: 11.8rem;
+            padding-bottom: 14.7rem;
+        }
+        
+        .about .bg-gray .txt-02{
+            margin-top: 4.1rem;
+        }
+        
+         .about .pc-right .inner{
+            margin-right: 12rem;
+        }
+    
+        .about .pc-right{
+            padding-top: 14.1rem;
+            position: relative;
+        }
+    
+        .about .pc-right .about-01{
+            width: 69%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .about .pc-right .about-txt-area{
+            width: 46%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    
+        .about .pc-right .mini-title{
+            margin-top: 5rem;
+        }
+    
+        .about .pc-right .mini-txt{
+            margin-top: 7.1rem;
+        }
+    
+        .about .pc-right .about-02{
+            width: unquote('min(calc(600vw * 100 / 1440),60rem)');
+            position: absolute;
+            right: 0;
+            bottom: -11.4rem;
+        }
+    
+        .about .about-bottom{
+            margin-top: 12.5rem;
+        }
+
+        .about .about-bottom .inner{
+            display: flex;
+            gap: 12rem;
+        }
+    
+        // .about .about-bottom .txt-01{
+        //     margin-top: rem;
+        // }
+    
+        .about .about-bottom .txt-02{
+            margin-top: 4.1rem;
+        }
+
+        .about .about-bottom .about-txt-area{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .about .about-bottom .about-03{
+            width: 100%;
+        }
+
+
+
 
     //＝＝＝  ＝＝
 
