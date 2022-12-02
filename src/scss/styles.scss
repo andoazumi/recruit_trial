@@ -1,6 +1,44 @@
 @import '~mathsass/dist/_math';
 @import '~ress/dist/ress.min.css';
 
+// 	Regular
+// font-family: noto-sans-cjk-jp,sans-serif;
+// font-weight: 400;
+// font-style: normal;
+
+// Medium
+// font-family: noto-sans-cjk-jp, sans-serif;
+// font-weight: 500;
+// font-style: normal;
+
+// Bold
+// font-family: noto-sans-cjk-jp,sans-serif;
+// font-weight: 700;
+// font-style: normal;
+
+// Light
+// font-family: lato, sans-serif;
+// font-weight: 300;
+// font-style: normal;
+
+// 	Regular
+// font-family: lato, sans-serif;
+// font-weight: 400;
+// font-style: normal;
+
+// Medium
+// font-family: lato,sans-serif;
+// font-weight: 500;
+// font-style: normal;
+
+// font-family: aktiv-grotesk,sans-serif;
+// font-weight: 300;
+// font-style: normal;
+
+// font-family: "HiraKakuPro-W6"
+
+// font-family:HelveticaNeue;
+
 :root{
     --c-font:#444444;
     --c-black-01:#000000;
@@ -25,6 +63,10 @@ html{
     font-size: 62.5%;
 }
 
+body{
+    font-family: noto-sans-cjk-jp, sans-serif;
+}
+
 a{
     text-decoration: none;
 }
@@ -47,11 +89,18 @@ img{
 .title{
     color: var(--c-navy);
     position: relative;
+    font-family: lato,sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.05rem;
+
 }
 
 .sub-title{
     color: var(--c-navy);
     opacity: 0.5;
+    font-family: lato,sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.1rem;
 }
 
 .title::before{
@@ -78,10 +127,26 @@ img{
 
 .txt-01{
     color: var(--c-navy);
+    font-weight: 500;
 }
 
 .txt-02{
     color: var(--c-font);
+}
+
+.mini-title{
+    font-family: lato,sans-serif;
+    font-weight: 500;
+}
+
+.mini-sub-title{
+    font-family: lato,sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.1rem;
+}
+
+.mini-txt{
+    font-family:HelveticaNeue;
 }
 
 .new-line{
@@ -114,6 +179,11 @@ img{
     justify-content: center;
     color: var(--c-white);
     background: var(--c-black-01);
+}
+
+.menu-btn .btn-txt{
+    font-family: lato, sans-serif;
+    font-weight: 300;
 }
 
 .menu-btn .btn-line{
@@ -220,6 +290,20 @@ img{
 
 .mv .mv-txt-area{
     position: absolute;
+}
+
+.mv .mv-txt-area .mv-txt-1{
+    letter-spacing: 0.141rem;
+}
+
+.mv .mv-txt-area .mv-txt-2{
+    font-family: lato, sans-serif;
+    font-weight: 300;
+    letter-spacing: 0.215rem;
+}
+
+.mv .mv-txt-area .mv-txt-3{
+    font-family: "Hiragino Kaku Gothic ProN", sans-serif;
 }
 
 .mv .mv-scroll{
@@ -458,11 +542,13 @@ img{
     .mv .mv-txt-area .mv-txt-1{
         font-size: 2.5rem;
         margin-top: 3.2rem;
+        letter-spacing: 0.141rem;
     }
 
     .mv .mv-txt-area .mv-txt-2{
         font-size: 1.2rem;
         margin-top: 1rem;
+        letter-spacing: 0.215rem;
     }
 
     .mv .mv-txt-area .mv-txt-3{
