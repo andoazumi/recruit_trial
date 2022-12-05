@@ -927,108 +927,186 @@ img{
         right: 12rem;
     }
 
-        //＝＝＝ about ＝＝＝
-        .about .pc-flex{
-            display: flex;
-        }
-        
-        .about .pc-left,
-        .about .pc-right{
-            width: 100%;
-            padding-top: 14.4rem;
-        }
-
-        .about .pc-left .txt-02{
-            width: unquote('min(calc(480vw * 100 / 1440),48rem)');
-        }
-        
-        .about .about-left-top .txt-01{
-            margin-top: 10.9rem;
-            width: unquote('min(calc(393vw * 100 / 1440),39.3rem)');
-            font-size: 3.2rem;
-        }
-        
-        .about .about-left-top .txt-02{
-            margin-top: 4.1rem;
-        }
-        
-        .about .bg-gray{
-            margin-top: 12.7rem;
-            padding-top: 11.8rem;
-            padding-bottom: 14.7rem;
-        }
-        
-        .about .bg-gray .txt-02{
-            margin-top: 4.1rem;
-        }
-        
-         .about .pc-right .inner{
-            margin-right: 12rem;
-        }
+    //＝＝＝ about ＝＝＝
+    .about .pc-flex{
+        display: flex;
+    }
     
-        .about .pc-right{
-            padding-top: 14.1rem;
-            position: relative;
-        }
-    
-        .about .pc-right .about-01{
-            width: 69%;
-            margin-left: auto;
-            margin-right: auto;
-        }
+    .about .pc-left,
+    .about .pc-right{
+        width: 100%;
+        padding-top: 14.4rem;
+    }
 
-        .about .pc-right .about-txt-area{
-            width: 46%;
-            margin-left: auto;
-            margin-right: auto;
-        }
+    .about .pc-left .txt-02{
+        width: unquote('min(calc(480vw * 100 / 1440),48rem)');
+    }
     
-        .about .pc-right .mini-title{
-            margin-top: 5rem;
-        }
+    .about .about-left-top .txt-01{
+        margin-top: 10.9rem;
+        width: unquote('min(calc(393vw * 100 / 1440),39.3rem)');
+        font-size: 3.2rem;
+    }
     
-        .about .pc-right .mini-txt{
-            margin-top: 7.1rem;
-        }
+    .about .about-left-top .txt-02{
+        margin-top: 4.1rem;
+    }
     
-        .about .pc-right .about-02{
-            width: unquote('min(calc(600vw * 100 / 1440),60rem)');
-            position: absolute;
-            right: 0;
-            bottom: -11.4rem;
-        }
+    .about .bg-gray{
+        margin-top: 12.7rem;
+        padding-top: 11.8rem;
+        padding-bottom: 14.7rem;
+    }
     
-        .about .about-bottom{
-            margin-top: 12.5rem;
-        }
-
-        .about .about-bottom .inner{
-            display: flex;
-            gap: 12rem;
-        }
+    .about .bg-gray .txt-02{
+        margin-top: 4.1rem;
+    }
     
-        // .about .about-bottom .txt-01{
-        //     margin-top: rem;
-        // }
-    
-        .about .about-bottom .txt-02{
-            margin-top: 4.1rem;
-        }
+        .about .pc-right .inner{
+        margin-right: 12rem;
+    }
 
-        .about .about-bottom .about-txt-area{
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
+    .about .pc-right{
+        padding-top: 14.1rem;
+        position: relative;
+    }
 
-        .about .about-bottom .about-03{
-            width: 100%;
-        }
+    .about .pc-right .about-01{
+        width: 69%;
+        margin-left: auto;
+        margin-right: auto;
+    }
 
+    .about .pc-right .about-txt-area{
+        width: 46%;
+        margin-left: auto;
+        margin-right: auto;
+    }
 
+    .about .pc-right .mini-title{
+        margin-top: 5rem;
+    }
 
+    .about .pc-right .mini-txt{
+        margin-top: 7.1rem;
+    }
+
+    .about .pc-right .about-02{
+        width: unquote('min(calc(600vw * 100 / 1440),60rem)');
+        position: absolute;
+        right: 0;
+        bottom: -11.4rem;
+    }
+
+    .about .about-bottom{
+        margin-top: 12.5rem;
+    }
+
+    .about .about-bottom .inner{
+        display: flex;
+        gap: 12rem;
+    }
+
+    // .about .about-bottom .txt-01{
+    //     margin-top: rem;
+    // }
+
+    .about .about-bottom .txt-02{
+        margin-top: 4.1rem;
+    }
+
+    .about .about-bottom .about-txt-area{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .about .about-bottom .about-03{
+        width: 100%;
+    }
 
     //＝＝＝  ＝＝
+
+}
+
+@media screen and (min-width:768px) and  (max-width:1023px){
+    .about{
+        margin-top: 7.2rem;
+    }
+
+    .about .pc-flex{
+        flex-direction: column;
+    }
+
+    .about .pc-left, .about .pc-right{
+        padding-top: 0;
+    }
+
+    .about .about-left-top .txt-01{
+        margin-top: 4.9rem;
+        width: 100%;
+    }
+
+    .about .about-left-top .txt-02{
+        margin-top: 3.1rem;
+        width: 100%;
+    }
+
+    .about .bg-gray{
+        margin-top: 7rem;
+        padding-top: 5.4rem;
+        padding-bottom: 6rem;
+    }
+
+    .about .bg-gray .txt-02{
+        margin-top: 2.2rem;
+        width: 100%;
+    }
+
+    .about .pc-right{
+        padding-top: 5.5rem;
+    }
+
+    .about .pc-right .inner{
+        margin-right: 12rem;
+        margin-left: 12rem;
+    }
+
+    .about .pc-right .about-txt-area{
+        width: 100%;
+    }
+
+    .about .pc-right .about-01{
+        width: 77%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .about .pc-right .mini-title{
+        margin-top: 2.6rem;
+    }
+
+    .about .pc-right .mini-txt{
+        margin-top: 6.9rem;
+    }
+
+    .about .pc-right .about-02{
+        margin-top: 6rem;
+        width: 100%;
+        position: static;
+    }
+
+    .about .about-bottom{
+        margin-top: 4.9rem;
+    }
+
+    .about .about-bottom .inner{
+        flex-direction: column;
+    }
+
+    .about .about-bottom .txt-02{
+        margin-top: 3rem;
+    }
 
 }
