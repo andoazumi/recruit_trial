@@ -58,6 +58,7 @@ const img_path = assetsRelative() + 'img';
 
   <!-- local CSS -->
   <%- include(INCLUDE_PATH + 'foundation/_styles', { css_path: assetsRelative() + 'css' }); -%>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,300,0,0" />
   <script>
     (function(d) {
       var config = {
@@ -168,7 +169,7 @@ const img_path = assetsRelative() + 'img';
                 <h1 class="title">ABOUT</h1>
                 <p class="sub-title">ABOUT ALO [ ANIMAL LIBERATION ORCHESTRA ]</p>
                 <p class="txt-01">
-                  この文章はダミーです。
+                  この文章はダミーです。<br>
                   文字の大きさ、量、字間、
                   行間等を確認するために
                   入れています。
@@ -220,29 +221,46 @@ const img_path = assetsRelative() + 'img';
     </div>
 
     <div class="product">
-      <div class="inner">
-        <h1 class="title">PRODUCT</h1>
-        <p class="sub-title">PRODUCT INFORMATION</p>
-        <p class="txt-01">
-          この文章はダミーです。
-        </p>
-        <p class="txt-02">
-          この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
-        </p>
-        <div class="product-area">
-          <p class="img product-img"></p>
-          <div class="product-flex">
-            <div class="circle-btn">
-              <span class="pc">VIEW MORE</span>
-            </div>
-            <p class="product-title">
-            </div>
+      <div class="product-top">
+          <div class="inner">
+          <h1 class="title">PRODUCT</h1>
+          <p class="sub-title">PRODUCT INFORMATION</p>
+          <p class="txt-01">
+            この文章はダミーです。
           </p>
-          <p class="product-txt">
-
+          <p class="txt-02">
+            この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
           </p>
         </div>
-      </div>
+        </div>
+        <div class="product-content-area">
+
+          <div class="product-content">
+            <div class="inner">
+              <p class="img product-img"><img src="./assets/img/product-01.jpg" alt=""></p>
+              <div class="product-flex">
+                <p class="product-title">ダミーダミーダミー</p>
+                <div class="circle-btn-area">
+                  <span class="pc">VIEW MORE</span>
+                  <div class="circle-btn">
+                    <svg>
+                      <circle cx="25" cy="25" r="25"/>
+                    </svg>
+                    <span class="add-icon"></span>
+                    <!-- <span class="material-symbols-outlined add-icon">
+                      add
+                    </span> -->
+                  </div>
+                </div>
+              </div>
+              <p class="product-txt">
+                この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。
+              </p>
+            </div>
+          </div>
+
+        </div>
+
     </div>
 
   </main>
