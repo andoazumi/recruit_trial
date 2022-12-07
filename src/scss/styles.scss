@@ -67,6 +67,7 @@ body{
     font-family: noto-sans-cjk-jp, sans-serif;
 }
 
+
 a{
     text-decoration: none;
 }
@@ -84,6 +85,10 @@ img{
 .inner{
     margin-left: auto;
     margin-right: auto;
+}
+
+.txt{
+    letter-spacing: 0.025rem;
 }
 
 .title{
@@ -258,8 +263,9 @@ img{
     width: 50%;
 }
 
-.header.on .menu-body .menu-contact .txt{
+.header.on .menu-body .menu-contact .menu-txt{
     font-size: 1.6rem;
+    letter-spacing: normal;
 }
 
 .header.on .menu-body .header-phone{
@@ -307,6 +313,7 @@ img{
 
 .mv .mv-txt-area .mv-txt-3{
     font-family: "Hiragino Kaku Gothic ProN", sans-serif;
+    letter-spacing: 0.02rem;
 }
 
 .mv .mv-scroll{
@@ -425,7 +432,7 @@ img{
 
 //＝＝＝  ＝＝＝
 
-
+//＝＝＝＝＝＝＝＝ sp ＝＝＝＝＝＝＝＝
 @media screen and (max-width:767px){
     //＝＝＝ common ＝＝＝
     .pc{
@@ -480,6 +487,7 @@ img{
     .header .logo{
         font-size: 1.5rem;
         margin-left: 1.7rem;
+        letter-spacing: 0.015rem;
     }
 
     .contact{
@@ -711,6 +719,7 @@ img{
     //＝＝＝＝＝＝
 }
 
+//＝＝＝＝＝＝＝＝ pc ＝＝＝＝＝＝＝＝
 @media screen and (min-width:768px){
     //＝＝＝ common ＝＝＝
     .sp{
@@ -909,7 +918,7 @@ img{
         height: 5.1rem;
     }
 
-    .header.on .menu-body .menu-contact .txt{
+    .header.on .menu-body .menu-contact .menu-txt{
         margin-right: unquote('min(calc(237vw * 100 /1440),23.7rem)');
     }
 
@@ -1112,10 +1121,11 @@ img{
         width: 100%;
     }
 
-    //＝＝＝  ＝＝
+    //＝＝＝  ＝＝＝
 
 }
 
+//＝＝＝＝＝＝＝＝ tab ＝＝＝＝＝＝＝＝
 @media screen and (min-width:768px) and  (max-width:1023px){
     .about{
         margin-top: 7.2rem;
