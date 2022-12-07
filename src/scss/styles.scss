@@ -366,6 +366,10 @@ img{
 }
 
 //＝＝＝ product ＝＝＝
+.product{
+    position: relative;
+}
+
 .product .product-top{
     background: var(--c-navy);
 }
@@ -384,6 +388,10 @@ img{
 .product .product-title{
     color: var(--c-black-03);
     font-weight: 700;
+}
+
+.product .product-content-area{
+        position: absolute;
 }
 
 .product .product-txt{
@@ -698,9 +706,35 @@ img{
     }
 
 //＝＝＝ product ＝＝＝
+    .product {
+        margin-top: 7rem;
+    }
+
     .product .product-top{
         padding-top: 7.2rem;
         padding-bottom: 13rem;
+    }
+
+    .product .product-content-area{
+        position: absolute;
+        top:35.9rem
+    }
+
+    .product .product-content:not(:first-child){
+        margin-top: 4rem;
+    }
+
+
+    .product .product-top .txt-01{
+        margin-top: 3rem;
+    }
+
+    .product .product-top .txt-02{
+        margin-top: 1.8rem;
+    }
+
+    .product .product-flex{
+        margin-top: 1rem;
     }
 
     .product .product-title{
@@ -709,6 +743,7 @@ img{
     
     .product .product-txt{
         font-size: var(--fz-common-small);
+        margin-top: 1rem;
     }
 
     .product svg{
@@ -1127,6 +1162,7 @@ img{
 
 //＝＝＝＝＝＝＝＝ tab ＝＝＝＝＝＝＝＝
 @media screen and (min-width:768px) and  (max-width:1023px){
+    //＝＝＝ about ＝＝＝
     .about{
         margin-top: 7.2rem;
     }
