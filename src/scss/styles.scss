@@ -442,6 +442,31 @@ img{
     position: absolute;
 }
 
+//＝＝＝ footer ＝＝＝
+.footer{
+    background: var(--c-black-02);
+    color: var(--c-white);
+    text-align: center;
+    .footer-top{
+        .contact-phone-area{
+            .contact-phone{
+                display: flex;
+                text-align: left;
+                justify-content: center;
+            }
+        }
+    }
+    .footer-bottom{
+        background: var(--c-black-01);
+        ul{
+            display: flex;
+            justify-content: center;
+            a{
+                color: var(--c-white);
+            }
+        }
+    }
+}
 
 //＝＝＝  ＝＝＝
 
