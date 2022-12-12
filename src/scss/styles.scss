@@ -534,7 +534,7 @@ img{
 
     .txt-01{
         font-size: var(--fz-sp-middle);
-        line-height: 3.6rem;
+        // line-height: 3.6rem;
     }
 
     .txt-02{
@@ -790,6 +790,7 @@ img{
 
     .product .product-top .txt-01{
         margin-top: 3rem;
+        font-size: 2.1rem;
     }
 
     .product .product-top .txt-02{
@@ -810,10 +811,16 @@ img{
         line-height: 1.8rem;
     }
 
+    .product .circle-btn{
+        width: 5.1rem;
+        height: 5.1rem;
+    }
+
     .product svg{
         width: 5.1rem;
         height: 5.1rem;
     }
+
     .product .add-icon::before{
         top: 2.5rem;
         left: 1.8rem;
@@ -1132,7 +1139,7 @@ img{
     
     .mv .mv-txt-area{
         width: 39%;
-        top:16%;
+        top:27%;
         // 144/900
         // 244/900 =27%
         right: 6%; // 80/1440
@@ -1145,6 +1152,10 @@ img{
     
     .mv .mv-txt-area .mv-txt-0{
         font-size: unquote('min(calc(26vw * 100 /1440),2.6rem)');
+        font-family: lato, sans-serif;
+        font-weight: 300;
+        line-height: 3.6rem;
+        letter-spacing: 0.1rem;
     }
 
     .mv .mv-txt-area .mv-txt-1{
@@ -1160,7 +1171,8 @@ img{
     .mv .mv-txt-area .mv-txt-3{
         font-size: unquote('min(calc(16vw * 100 /1440),1.6rem)');
         margin-top:unquote('min(calc(59vw * 100 /1440),5.9rem)');
-        text-align: 3.2rem;
+        line-height: 3.2rem;
+        width: unquote('min(calc(438vw * 100 /1440),43.8rem)');
     }
 
     .mv .mv-scroll .pc{
@@ -1192,19 +1204,19 @@ img{
     
     .about .pc-left,
     .about .pc-right{
-        width: 100%;
+        width: 50%;
         padding-top: 14.4rem;
-    }
-
-    .about .pc-left .txt-02{
-        width: unquote('min(calc(480vw * 100 / 1440),48rem)');
     }
     
     .about .about-left-top .txt-01{
         margin-top: 10.9rem;
-        width: unquote('min(calc(393vw * 100 / 1440),39.3rem)');
+        // width: unquote('min(calc(393vw * 100 / 1440),39.3rem)');
         font-size: 3.2rem;
     }
+    
+        // .about .pc-left .txt-02{
+        //     width: unquote('min(calc(480vw * 100 / 1440),48rem)');
+        // }
     
     .about .about-left-top .txt-02{
         margin-top: 4.1rem;
@@ -1231,14 +1243,16 @@ img{
     
     .about .pc-right .about-01{
         width: unquote('min(calc(498vw * 100 / 1440),49.8rem)');
-        margin-left: auto;
-        margin-right: auto;
+        margin-left: unquote('min(calc(76vw * 100 / 1440),7.6rem)');
+        // margin-left: auto;
+        // margin-right: auto;
     }
 
     .about .pc-right .about-txt-area{
         width: unquote('min(calc(333vw * 100 / 1440),33.3rem)');
-        margin-left: auto;
-        margin-right: auto;
+        margin-left: unquote('min(calc(180vw * 100 / 1440),18rem)');
+        // margin-left: auto;
+        // margin-right: auto;
     }
 
     .about .pc-right .mini-title{
@@ -1338,6 +1352,8 @@ img{
         }
 
         .circle-btn{
+            width: 6.1rem;
+            height: 6.1rem;
             svg{
                 width: 6.1rem;
                 height: 6.1rem;
@@ -1419,8 +1435,10 @@ img{
         flex-direction: column;
     }
 
-    .about .pc-left, .about .pc-right{
+    .about .pc-left, 
+    .about .pc-right{
         padding-top: 0;
+        width: 100%;
     }
 
     .about .about-left-top .txt-01{
@@ -1453,15 +1471,18 @@ img{
         margin-left: 12rem;
     }
 
-    .about .pc-right .about-txt-area{
-        width: 100%;
-    }
-
     .about .pc-right .about-01{
         width: 77%;
         margin-left: auto;
         margin-right: auto;
     }
+
+    .about .pc-right .about-txt-area{
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
 
     .about .pc-right .mini-title{
         margin-top: 2.6rem;
