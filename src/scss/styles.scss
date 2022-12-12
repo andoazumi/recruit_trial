@@ -190,7 +190,7 @@ img{
     align-items: center;
     justify-content: center;
     color: var(--c-white);
-    background: var(--c-black-01);
+    background: var(--c-black-02);
 }
 
 .menu-btn .btn-txt{
@@ -451,6 +451,7 @@ img{
     background: var(--c-black-02);
     color: var(--c-white);
     text-align: center;
+    font-size: 1.4rem;
     .footer-top{
         .contact-phone-area{
             .contact-phone{
@@ -459,6 +460,32 @@ img{
                 justify-content: center;
                 align-items: center;
             }
+        }
+    }
+    .contact-phone-area{            
+        .txt{
+            font-size: 1.6rem;
+            font-weight: 700;
+        }
+    }
+    .contact-phone{
+        .icon-phone{
+            border-radius: 50%;
+            border: 0.1rem solid var(--c-white);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img{
+                width: 50%;
+            }
+        }
+    }
+    .page-top{
+        margin-top: 8rem;
+        .txt{
+            font-family: lato, sans-serif;
+            font-weight: 400;
+            letter-spacing: 0.05rem;
         }
     }
     .footer-bottom{
@@ -709,13 +736,13 @@ img{
     }
 
     .about .pc-right .about-01{
-        width: 77%;
+        width: calc(287vw * 100 / 375 );
         margin-left: auto;
         margin-right: auto;
     }
 
     .about .pc-right .mini-title{
-        margin-top: 2.6rem;
+        margin-top: 2.5rem;
     }
 
     .about .pc-right .mini-txt{
@@ -797,20 +824,12 @@ img{
         left: 1.8rem;
     }
 
+    //＝＝＝ footer ＝＝＝
     .footer{
         margin-top: 6.7rem;
-        font-size: 1.4rem;
         padding-bottom: 0.9rem;
         .footer-top{
             margin-top: 5.6rem;
-            margin-left: 2rem;
-            margin-right: 2rem;
-        }
-        .contact-phone-area{            
-            .txt{
-                font-size: 1.6rem;
-                font-weight: 700;
-            }
         }
         .contact-phone{
             border-top: 0.1rem solid rgba( 255,255,255,0.1);
@@ -818,16 +837,8 @@ img{
             margin-top: 2rem;
             padding-top: 1.9rem;
             .icon-phone{
-                border-radius: 50%;
-                border: 0.1rem solid var(--c-white);
-                display: flex;
-                justify-content: center;
-                align-items: center;
                 width: 5.1rem;
                 height: 5.1rem;
-                img{
-                    width: 50%;
-                }
             }
         }
         .phone-txt{
@@ -844,11 +855,6 @@ img{
         }
         .page-top{
             margin-top: 6rem;
-            .txt{
-                font-family: lato, sans-serif;
-                font-weight: 400;
-                letter-spacing: 0.05rem;
-            }
         }
         .footer-bottom{
             margin-top: 4rem;
@@ -858,8 +864,6 @@ img{
                 gap: 2.8rem;
             }
             .copy{
-                margin-left: 2rem;
-                margin-right: 2rem;
                 margin-top: 5.1rem;
                 padding-top: 2.8rem;
                 border-top: 0.1rem solid rgba( 255,255,255,0.2);
@@ -884,7 +888,8 @@ img{
 
     .about .pc-left .inner,
     .about-bottom .inner,
-    .product .inner{
+    .product .inner,
+    .footer .inner{
         margin-left: 12rem;
         margin-right: 12rem;
     }
@@ -1297,10 +1302,12 @@ img{
             }
         }
         
-        .inner{
-            display: flex;
-            flex-wrap: wrap;
-            gap: 6rem;
+        .product-content-area{
+            .inner{
+                display: flex;
+                flex-wrap: wrap;
+                gap: 6rem;
+            }
         }
 
         .product-content{
@@ -1349,7 +1356,52 @@ img{
 
     }
 
+    //＝＝＝ footer ＝＝＝
+    .footer{
+        margin-top: 14.4rem;
+        .footer-top{
+            margin-top: 6rem;
+        }
+        .contact-phone{
+            margin-top: 2.8rem;
+            gap: 2.6rem;
+            .icon-phone{
+                width: 6.1rem;
+                height: 6.1rem;
+            }
+        }
+        .phone-txt{
+            .phone-nomber{
+                font-family: lato, sans-serif;
+                font-weight: 300;
+                letter-spacing: 0.02rem;
+                font-size: 3.6rem;
+            }
+            .txt-small{
+                font-size: 1.3rem;
+                margin-top: 0.1rem;
+            }
+        }
+        .page-top{
+            margin-top: 8rem;
+            .txt{
+                font-size: 1.4rem;
+            }
+        }
+        .footer-bottom{
+            margin-top: 6.1rem;
+            padding-top: 5rem;
+            padding-bottom: 5rem;
+            .inner{
+                display: flex;
+                justify-content: space-between;
+                ul{
+                    gap: 4.3rem;
+                }
+            }
+        }
 
+    }
 
 
     //＝＝＝  ＝＝＝
