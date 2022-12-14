@@ -95,7 +95,7 @@ img{
     color: var(--c-navy);
     font-family: lato,sans-serif;
     font-weight: 500;
-    letter-spacing: 0.05rem;
+    letter-spacing: 0.05em;
     
 }
 
@@ -104,7 +104,7 @@ img{
     color: var(--c-navy);
     font-family: lato,sans-serif;
     font-weight: 500;
-    letter-spacing: 0.1rem;
+    letter-spacing: 0.1em;
 }
 
 .sub-title span{
@@ -151,7 +151,7 @@ img{
 .mini-sub-title{
     font-family: lato,sans-serif;
     font-weight: 500;
-    letter-spacing: 0.1rem;
+    letter-spacing: 0.1em;
     font-size: 1.2rem;
 }
 
@@ -305,16 +305,16 @@ img{
     .mv-txt-area{
         position: absolute;
         .mv-txt-1{
-            letter-spacing: 0.141rem;
+            letter-spacing: 0.141em;
         }
         .mv-txt-2{
             font-family: lato, sans-serif;
             font-weight: 300;
-            letter-spacing: 0.215rem;
+            letter-spacing: 0.215em;
         }
         .mv-txt-3{
             font-family: "Hiragino Kaku Gothic ProN", sans-serif;
-            letter-spacing: 0.02rem;
+            letter-spacing: 0.02em;
         }    
     }
 
@@ -491,7 +491,7 @@ img{
         .txt{
             font-family: lato, sans-serif;
             font-weight: 400;
-            letter-spacing: 0.05rem;
+            letter-spacing: 0.05em;
         }
     }
     .footer-bottom{
@@ -559,7 +559,7 @@ img{
         .logo{
             font-size: 1.5rem;
             margin-left: 1.7rem;
-            letter-spacing: 0.015rem;
+            letter-spacing: 0.015em;
         }
         
         .contact{
@@ -681,12 +681,12 @@ img{
             .mv-txt-1{
                 font-size: 2.5rem;
                 margin-top: 3.2rem;
-                letter-spacing: 0.141rem;
+                letter-spacing: 0.141em;
             }
             .mv-txt-2{
                 font-size: 1.2rem;
                 margin-top: 1rem;
-                letter-spacing: 0.215rem;
+                letter-spacing: 0.215em;
             }
         
             .mv-txt-3{
@@ -853,7 +853,7 @@ img{
             .phone-nomber{
                 font-family: aktiv-grotesk,sans-serif;
                 font-weight: 300;
-                letter-spacing: 0.02rem;
+                letter-spacing: 0.02em;
                 font-size: var(--fz-sp-middle);
             }
             .txt-small{
@@ -1153,7 +1153,7 @@ img{
                 font-family: lato, sans-serif;
                 font-weight: 300;
                 line-height: 3.6rem;
-                letter-spacing: 0.1rem;
+                letter-spacing: 0.1em;
             }
         
             .mv-txt-1{
@@ -1180,7 +1180,7 @@ img{
                 font-family: aktiv-grotesk,sans-serif;
                 font-weight: 300;
                 font-size: 1.1rem;
-                letter-spacing: 0.025rem;
+                letter-spacing: 0.025em;
                 position: absolute;
                 right: 12rem;
                 bottom: 6.6rem;
@@ -1213,7 +1213,7 @@ img{
         .about-left-top{
             .txt-01{
                 margin-top: 10.9rem;
-                // width: unquote('min(calc(393vw * 100 / 1440),39.3rem)');
+                width: unquote('min(calc(393vw * 100 / 1440),39.3rem)');
                 font-size: 3.2rem;
             }
             
@@ -1352,7 +1352,7 @@ img{
                 font-size: 1rem;
                 font-family: lato,sans-serif;
                 font-weight: 500;
-                letter-spacing: 0.1rem;
+                letter-spacing: 0.1em;
             }
         }
 
@@ -1395,7 +1395,7 @@ img{
             .phone-nomber{
                 font-family: lato, sans-serif;
                 font-weight: 300;
-                letter-spacing: 0.02rem;
+                letter-spacing: 0.02em;
                 font-size: 3.6rem;
             }
             .txt-small{
