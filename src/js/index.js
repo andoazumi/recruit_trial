@@ -2,6 +2,7 @@ import { debounce } from 'lodash-es';
 import Stats from 'stats-js';
 
 import EVENTS from '~/constants/event-names';
+import HeaderController from '~/controllers/header';
 
 (function () {
   /// /////////////////////////////////////////////////////// Performance Monitor
