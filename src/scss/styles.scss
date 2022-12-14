@@ -35,7 +35,7 @@
 // font-weight: 300;
 // font-style: normal;
 
-// font-family: "HiraKakuPro-W6"
+// font-family: "HiraKakuPro-W6";
 
 // font-family:HelveticaNeue;
 
@@ -158,7 +158,8 @@ img{
 .mini-txt{
     font-family:HelveticaNeue;
     font-size: 1.4rem;
-    line-height: 2.6;
+    line-height: 1.85;
+    // 26 / 14
 }
 
 .new-line{
@@ -166,6 +167,7 @@ img{
 }
 
 .header{
+    transition: all 0.3s;
     .header-wrapper{
         display: flex;
         align-items: center;
@@ -202,6 +204,7 @@ img{
         display: none;
         background: var(--c-black-01);
         color: var(--c-white);
+        height: 100vh;
     }
 }
 
@@ -210,8 +213,11 @@ img{
 }
 
 .header.on{
+    position: fixed;
+    z-index: 100;
+    width: 100%;
     background: var(--c-black-01);
-    height: 100vh;
+    // height: 100vh;
     .logo{
         color: var(--c-white);
     }
@@ -243,6 +249,13 @@ img{
         }
     }
 
+    nav{
+        a{
+            font-family: "HiraKakuPro-W6";
+            letter-spacing: 0.025em;
+        }
+    }
+
     .menu-contact-area{
         display: flex;
         justify-content: center;
@@ -271,16 +284,25 @@ img{
         .menu-txt{
             font-size: 1.6rem;
             letter-spacing: normal;
+            font-family: "HiraKakuPro-W6";
         }
     }
 
     .header-phone{
         text-align: center;
+        .phone-nomber{
+            font-size: 3.6rem;
+            font-family: lato, sans-serif;
+            font-weight: 300;
+            letter-spacing: 0.02em;
+        }
+
+        .txt-small{
+            font-size: 1.3rem;
+            letter-spacing: 0.025em;
+        }
     }
     
-    .phone-nomber{
-        font-size: 3.6rem;
-    }
 
 }
 
@@ -290,7 +312,9 @@ img{
     display: block;
     font-size: 1.4rem;
     text-align: center;
-    line-height: 4.8;
+    // line-height: 4.8rem;
+    padding-top: 1.3rem;
+    padding-bottom: 1.3rem;
     transition: 0.6s;
 }
 
@@ -540,12 +564,14 @@ img{
 
     .txt-01{
         font-size: var(--fz-sp-middle);
-        // line-height: 3.6;
+        line-height: 1.5;
+        // 36 / 24
     }
 
     .txt-02{
         font-size: var(--fz-common-middle);
-        line-height: 3.2;
+        line-height: 2;
+        // 32 / 16
     }
 
     .mini-title{
@@ -625,7 +651,8 @@ img{
             padding-bottom: 4rem;
             li{
                 font-size: 1.6rem;
-                line-height: 4.8;
+                line-height: 3;
+                // 48 / 16
             }
         }
 
@@ -650,6 +677,9 @@ img{
 
         .header-phone{
             margin-top: 1.2rem;
+            .txt-small{
+                font-size: 1.2rem;
+            }
         }
     }
 
@@ -806,7 +836,8 @@ img{
         .product-txt{
             font-size: var(--fz-common-small);
             margin-top: 1rem;
-            line-height: 1.8;
+            line-height: 1.5;
+            // 18 / 12
         }
 
         .circle-btn{
@@ -920,16 +951,16 @@ img{
 
     .txt-01{
         font-size: var(--fz-pc-middle);
-        line-height: 4.8;
     }
 
     .txt-02{
         font-size: var(--fz-common-middle);
-        line-height: 3.2rem;
+        line-height: 2;
+        // 32 / 16
     }
 
     .mini-title{
-        font-size: 4.8;
+        font-size: 4.8rem;
     }
 
 
@@ -959,7 +990,8 @@ img{
                 display: block;
                 font-size: 1.4rem;
                 text-align: center;
-                line-height: 4.8;
+                padding-top: 1.3rem;
+                padding-bottom: 1.3rem;
                 transition: 0.6s;
                 &:hover{
                     background-color: var(--c-white);
@@ -1030,6 +1062,8 @@ img{
 
         .menu-logo{
             font-size: 2.6rem;
+            font-weight: 300;
+            letter-spacing: 0.1em;
         }
 
         .menu-wrapper{
@@ -1046,7 +1080,8 @@ img{
             border-left: 0.1rem solid rgba( 255,255,255,0.1);
             li{
                 font-size: 1.8rem;
-                line-height: 6;
+                line-height: 3.33;
+                // 60/18
             }
         }
         
@@ -1114,7 +1149,9 @@ img{
 
     //＝＝＝ mv ＝＝
     .mv{
+        height: 100vh;
         .mv-inner{
+            height: 100%;
             display: flex;
         }
         
@@ -1132,8 +1169,10 @@ img{
             }
 
             img{
+                height: 100%;
                 width: 69%;
                 // 1000/1440
+                object-fit: cover;
             }
         }
 
@@ -1152,7 +1191,8 @@ img{
                 font-size: unquote('min(calc(26vw * 100 /1440),2.6rem)');
                 font-family: lato, sans-serif;
                 font-weight: 300;
-                line-height: 3.6;
+                line-height: 1.38;
+                // 36/26
                 letter-spacing: 0.1em;
             }
         
@@ -1169,7 +1209,8 @@ img{
             .mv-txt-3{
                 font-size: unquote('min(calc(16vw * 100 /1440),1.6rem)');
                 margin-top:unquote('min(calc(59vw * 100 /1440),5.9rem)');
-                line-height: 3.2;
+                line-height: 2;
+                // 32/26
                 width: unquote('min(calc(438vw * 100 /1440),43.8rem)');
             }
         }
@@ -1215,6 +1256,8 @@ img{
                 margin-top: 10.9rem;
                 width: unquote('min(calc(393vw * 100 / 1440),39.3rem)');
                 font-size: 3.2rem;
+                line-height: 1.5;
+                // 48/32
             }
             
             .txt-02{
@@ -1226,7 +1269,8 @@ img{
             margin-top: 12.7rem;
             padding-top: 11.8rem;
             .txt-01{
-                line-height: 3.6;
+                line-height:1.5 ;
+                // 36 / 24
             }
             padding-bottom: 14.7rem;
             .txt-02{
@@ -1280,7 +1324,8 @@ img{
             }
 
             .txt-01{
-                line-height: 3.6;
+                line-height: 1.5;
+                // 36/24
             }
 
             .txt-02{
@@ -1316,12 +1361,24 @@ img{
         .product-top{
             padding-top: 14.6rem;
             padding-bottom: 7.5rem;
+            // .title{
+            //     line-height: 2.25;
+                // 135/60 = 2.25
+            // }
 
+            // .sub-title{
+            //     line-height: 2.67;
+            //     32/12
+            // }
             .txt-01{
                 margin-top: 3.7rem;
+                line-height: normal;
+                // 48/24
             }
             .txt-02{
                 margin-top: 1.9rem;
+                line-height: normal;
+                // 36/16 =2.25
             }
         }
         
@@ -1338,7 +1395,8 @@ img{
             .product-txt{
                 font-size: 1.3rem;
                 margin-top: 1.5rem;
-                line-height: 2.6;
+                line-height: 2;
+                // 26/13
                 }
                 .product-flex{
                     margin-top: 2rem;
@@ -1444,7 +1502,8 @@ img{
                 padding-bottom: 0;
                 li{
                     font-size: 1.6rem;
-                    line-height: 4.8;
+                    line-height: 3;
+                    // 48/16
                 }
             }
         }
