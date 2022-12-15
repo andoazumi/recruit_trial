@@ -167,7 +167,7 @@ img{
 }
 
 .header{
-    transition: all 0.7s;
+    transition: all 0.3s;
     .header-wrapper{
         display: flex;
         align-items: center;
@@ -190,21 +190,27 @@ img{
         justify-content: center;
         color: var(--c-white);
         background: var(--c-black-02);
+        cursor: pointer;
+        transition: 0.3s;
         .btn-txt{
             font-family: lato, sans-serif;
             font-weight: 300;
+            transition: 0.5s;
         }
         .btn-line{
             height: 0.1rem;
             background: var(--c-white);
+            transition: 0.5s;
         }
 
     }
     .menu-body {
         opacity: 0;
+        visibility: hidden;
         color: var(--c-white);
         height: 100vh;
         z-index: -10;
+        transition: all 0.3s;
     }
 }
 
@@ -243,6 +249,7 @@ img{
     
     .menu-body {
         opacity: 1;
+        visibility: visible;
         font-size: 1.2rem;
         transition: all 0.7s;
         background: var(--c-black-01);
@@ -1164,7 +1171,7 @@ img{
         
         picture{
             position: relative;
-
+            width: 100%;
             &::after{
                 content: "";
                 position: absolute;
