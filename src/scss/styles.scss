@@ -211,47 +211,6 @@ img{
         height: 100vh;
         z-index: -10;
         transition: all 0.3s;
-    }
-}
-
-.contact{
-    display: flex;
-}
-
-.header.on{
-    position: fixed;
-    z-index: 100;
-    width: 100%;
-    background: var(--c-black-01);
-    // height: 100vh;
-    .logo{
-        color: var(--c-white);
-    }
-
-    .btn-txt{
-        display: none;
-    }
-
-    .menu-btn{
-        background: var(--c-black-01);
-    }
-
-    .btn-line:nth-child(2){
-        transform:translateY(-50%) rotate(45deg);
-    }
-    
-    .btn-line:last-child{
-        transform:translateY(-50%) rotate(-45deg);
-    }
-    .contact{
-        display: none;
-    }
-    
-    .menu-body {
-        opacity: 1;
-        visibility: visible;
-        font-size: 1.2rem;
-        transition: all 0.7s;
         background: var(--c-black-01);
         a{
             color: var(--c-white);
@@ -311,8 +270,48 @@ img{
             letter-spacing: 0.025em;
         }
     }
-    
+}
 
+.contact{
+    display: flex;
+}
+
+.header.on{
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    background: var(--c-black-01);
+    // height: 100vh;
+    .logo{
+        color: var(--c-white);
+    }
+
+    .btn-txt{
+        display: none;
+    }
+
+    .menu-btn{
+        background: var(--c-black-01);
+    }
+
+    .btn-line:nth-child(2){
+        transform:translateY(-50%) rotate(45deg);
+    }
+    
+    .btn-line:last-child{
+        transform:translateY(-50%) rotate(-45deg);
+    }
+    .contact{
+        display: none;
+    }
+    
+    .menu-body {
+        opacity: 1;
+        visibility: visible;
+        font-size: 1.2rem;
+        transition: all 0.7s;
+
+    }  
 }
 
 .btn-mail a{
@@ -645,18 +644,11 @@ img{
                 height: 3.5rem;
             }
         }
-    }
-    
-    .header.on {
+
         .menu-body{
-            height:calc(100vh - 6rem);
             .inner{
                 margin: 0 4rem;
             }
-        }
-
-        .btn-line{
-            margin-top: 0;
         }
 
         nav{
@@ -693,6 +685,16 @@ img{
             .txt-small{
                 font-size: 1.2rem;
             }
+        }
+    }
+    
+    .header.on {
+        .menu-body{
+            height:calc(100vh - 6rem);
+        }
+
+        .btn-line{
+            margin-top: 0;
         }
     }
 
@@ -990,6 +992,7 @@ img{
             font-size: 2.2rem;
             margin-left: 3.6rem;
             color: var(--c-white);
+            visibility: visible;
         }
         
         .contact{
@@ -1056,14 +1059,6 @@ img{
                 }
             }
         }
-    }
-
-
-    .header.on{
-        .logo{
-            opacity: 0;
-            pointer-events: none;
-        }
 
         .menu-body{
             padding-top: 11rem;
@@ -1090,6 +1085,8 @@ img{
 
         nav{
             width: 44%;
+            padding-top: 5.7rem;
+            padding-bottom: 5.7rem;
             padding-left: calc(102vw * 100 /1440);
             border-left: 0.1rem solid rgba( 255,255,255,0.1);
             li{
@@ -1103,21 +1100,35 @@ img{
             width: 56%;
         }
 
-        .btn-line{
-            margin-top: 0;
-            &:nth-child(2){
-                margin-top: 0;
-            }
-            &:last-child{
-                margin-top: 0;
-            }
-        }
-
         .menu-contact{
             width: 100%;
             .img{
                 width: 5.1rem;
                 height: 5.1rem;
+            }
+
+            &:first-child{
+                padding-top: 5.7rem;
+            }
+
+            &:last-child{
+                padding-bottom: 5.7rem;
+            }
+
+
+
+            .btn-mail{
+                margin-top: 3.1rem;
+                a{
+                    max-width: 32rem;
+                    width: calc(320vw * 100 /1440);
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            }
+
+            .header-phone{
+                margin-top: 2.1rem;
             }
 
             .menu-txt{
@@ -1129,31 +1140,36 @@ img{
             }
         }
 
-        .btn-mail{
-            margin-top: 3.1rem;
-            a{
-                max-width: 32rem;
-                width: calc(320vw * 100 /1440);
-                margin-left: auto;
-                margin-right: auto;
+    }
+
+
+    .header.on{
+        .logo{
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+        }
+
+        .btn-line{
+            margin-top: 0;
+            &:nth-child(2){
+                margin-top: 0;
             }
-
-        }
-
-        .header-phone{
-            margin-top: 2.1rem;
+            &:last-child{
+                margin-top: 0;
+            }
         }
     }
 
-    .header.on .menu-body nav,
-    .menu-body .menu-contact:first-child{
-        padding-top: 5.7rem;
-    }
+    // .header.on .menu-body nav,
+    // .menu-body .menu-contact:first-child{
+    //     padding-top: 5.7rem;
+    // }
     
-    .header.on .menu-body nav,
-    .menu-body .menu-contact:last-child{
-        padding-bottom: 5.7rem;
-    }
+    // .header.on .menu-body nav,
+    // .menu-body .menu-contact:last-child{
+    //     padding-bottom: 5.7rem;
+    // }
 
     // .header.on .menu-body .btn-mail,
     // .header.on .menu-body .header-phone{
