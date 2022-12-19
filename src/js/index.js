@@ -52,6 +52,33 @@ import EVENTS from '~/constants/event-names';
 
     // 
 
+    $(function(){
+      $(document).ready(function(){
+        let mvHeight = $('.mv').outerHeight();
+        // キービジュアルの高さをとる
+        console.log(mvHeight);
+
+        let width = $(window).width();
+        console.log(width);
+        // if (width => 768){
+        if(window.matchMedia("(min-width: 768px)").matches){
+          // SPサイズではないときにしたい(できていない)
+          $(window).scroll(function(){
+            // スクロールした時
+            if ($(this).scrollTop() > mvHeight){
+              // キービジュアルの高さを越えたら
+              $('.header').addClass('fixed');
+              // クラスをつける
+            }else{
+              // キービジュアルの高さを越えていなかったら
+              $('.header').removeClass('fixed');
+              // クラスを外す
+            }
+          });
+       }
+      });
+    });
+
   }
   window.addEventListener(EVENTS.RESIZE, debounce(onResize, 200));
 
@@ -80,28 +107,28 @@ import EVENTS from '~/constants/event-names';
 
 // });
 
-$(function(){
-  let mvHeight = $('.mv').outerHeight();
+// $(function(){
+//   let mvHeight = $('.mv').outerHeight();
   // キービジュアルの高さをとる
-  console.log(mvHeight);
+  // console.log(mvHeight);
 
-  let width = $(window).width();
-  if (width > 767){
+  // let width = $(window).width();
+  // if (width > 767){
     // if(window.matchMedia("(min-width: 768px)").matches){
       // SPサイズではないときにしたい(できていない)
-      $(window).scroll(function(){
+      // $(window).scroll(function(){
         // スクロールした時
-        if ($(this).scrollTop() > mvHeight){
+        // if ($(this).scrollTop() > mvHeight){
           // キービジュアルの高さを越えたら
-          $('.header').addClass('fixed');
+          // $('.header').addClass('fixed');
           // クラスをつける
-        }else{
+        // }else{
           // キービジュアルの高さを越えていなかったら
-          $('.header').removeClass('fixed');
+          // $('.header').removeClass('fixed');
           // クラスを外す
-        }
-      });
+      //   }
+      // });
       // }
-    }
+//     }
   
-});
+// });
