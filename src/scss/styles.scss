@@ -1142,6 +1142,45 @@ img{
 
     }
 
+    .header.fixed{
+        position: fixed;
+        background: var(--c-white);
+        animation: DownAnime 0.5s forwards;
+        @keyframes DownAnime {
+            from{
+                opacity: 0;
+                transform: translateY(-10rem);
+            }
+            to{
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .logo{
+
+            color: var(--c-black-01);
+        }
+        
+
+        .btn-mail {
+            a{
+                border: 0.1rem solid var(--c-black-01);
+                color: var(--c-black-01);
+                &:hover{
+                    background-color: var(--c-black-01);
+                    color: var(--c-white);
+                }
+            }
+        }
+        .header-phone{
+            color: var(--c-black-01);
+
+            .phone-tel{
+                border-bottom: 0.1rem solid var(--c-black-01);
+            }
+        }
+    }
+
 
     .header.on{
         .logo{
