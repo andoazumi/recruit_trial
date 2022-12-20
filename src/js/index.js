@@ -52,33 +52,6 @@ import EVENTS from '~/constants/event-names';
 
     // 
 
-    $(function(){
-      $(document).ready(function(){
-        let mvHeight = $('.mv').outerHeight();
-        // キービジュアルの高さをとる
-        console.log(mvHeight);
-
-        let width = $(window).width();
-        console.log(width);
-        // if (width => 768){
-        if(window.matchMedia("(min-width: 768px)").matches){
-          // SPサイズではないときにしたい(できていない)
-          $(window).scroll(function(){
-            // スクロールした時
-            if ($(this).scrollTop() > mvHeight){
-              // キービジュアルの高さを越えたら
-              $('.header').addClass('fixed');
-              // クラスをつける
-            }else{
-              // キービジュアルの高さを越えていなかったら
-              $('.header').removeClass('fixed');
-              // クラスを外す
-            }
-          });
-       }
-      });
-    });
-
   }
   window.addEventListener(EVENTS.RESIZE, debounce(onResize, 200));
 
@@ -95,6 +68,9 @@ import EVENTS from '~/constants/event-names';
     if (process.env.NODE_ENV === 'development') {
       performanceMonitor();
     }
+
+
+    
   }
   window.addEventListener(EVENTS.LOAD, onLoad);
 })();
@@ -132,3 +108,47 @@ import EVENTS from '~/constants/event-names';
 //     }
   
 // });
+
+$(function(){
+  // htmlを読み込んでから
+
+  
+  function addFixed(){
+    // 関数宣言
+
+    let mvHeight = $('.mv').outerHeight();
+    // キービジュアルの高さをとる
+    console.log(mvHeight);
+    
+    let width = $(window).width();
+    // 画面幅の数値をとる
+    console.log(width);
+
+    // if (width => 768){
+      if(window.matchMedia("(min-width: 768px)").matches){
+        // 768px以上の時に行う。
+
+        $(window).scroll(function(){
+          // スクロールした時
+          if ($(this).scrollTop() > mvHeight){
+            // キービジュアルの高さを越えたら
+            $('.header').addClass('fixed');
+            // クラスをつける
+          }else{
+            // キービジュアルの高さを越えていなかったら
+            $('.header').removeClass('fixed');
+            // クラスを外す
+          }
+        });
+
+      }
+    }
+
+    addFixed();
+
+    $(window).resize(function(){
+      // ウィンドウが変更されるごとに関数を実行
+      addFixed();
+    });
+});
+
