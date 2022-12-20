@@ -1146,6 +1146,7 @@ img{
         position: fixed;
         background: var(--c-white);
         animation: DownAnime 0.5s forwards;
+        height: 8.8rem;
         @keyframes DownAnime {
             from{
                 opacity: 0;
@@ -1161,6 +1162,11 @@ img{
             color: var(--c-black-01);
         }
         
+        .menu-btn{
+            height: 8.8rem;
+            margin-left: 2rem;
+            margin-right: 0;
+        }
 
         .btn-mail {
             a{
