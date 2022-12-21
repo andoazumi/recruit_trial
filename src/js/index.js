@@ -83,32 +83,6 @@ import EVENTS from '~/constants/event-names';
 
 // });
 
-// $(function(){
-//   let mvHeight = $('.mv').outerHeight();
-  // キービジュアルの高さをとる
-  // console.log(mvHeight);
-
-  // let width = $(window).width();
-  // if (width > 767){
-    // if(window.matchMedia("(min-width: 768px)").matches){
-      // SPサイズではないときにしたい(できていない)
-      // $(window).scroll(function(){
-        // スクロールした時
-        // if ($(this).scrollTop() > mvHeight){
-          // キービジュアルの高さを越えたら
-          // $('.header').addClass('fixed');
-          // クラスをつける
-        // }else{
-          // キービジュアルの高さを越えていなかったら
-          // $('.header').removeClass('fixed');
-          // クラスを外す
-      //   }
-      // });
-      // }
-//     }
-  
-// });
-
 $(function(){
   // htmlを読み込んでから
 
@@ -118,37 +92,77 @@ $(function(){
 
     let mvHeight = $('.mv').outerHeight();
     // キービジュアルの高さをとる
-    console.log(mvHeight);
+    // console.log(mvHeight);
     
-    let width = $(window).width();
+    let widthSize = $(window).width();
     // 画面幅の数値をとる
-    console.log(width);
+    // console.log(widthSize);
 
+
+    // 間違っているゾーン
     // if (width => 768){
-      if(window.matchMedia("(min-width: 768px)").matches){
-        // 768px以上の時に行う。
-
-        $(window).scroll(function(){
-          // スクロールした時
-          if ($(this).scrollTop() > mvHeight){
-            // キービジュアルの高さを越えたら
-            $('.header').addClass('fixed');
-            // クラスをつける
-          }else{
-            // キービジュアルの高さを越えていなかったら
-            $('.header').removeClass('fixed');
-            // クラスを外す
+      //        ↑不等号の書き方が違う
+      // if(window.matchMedia("(min-width: 768px)").matches){
+        //     // 768px以上の時に行う。
+        
+        //     $(window).scroll(function(){
+          //       // スクロールした時
+          //       if ($(this).scrollTop() > mvHeight){
+                       // 
+            //         // キービジュアルの高さを越えたら
+            //         $('.header').addClass('fixed');
+            //         // クラスをつける
+            //       }else{
+              //         // キービジュアルの高さを越えていなかったら
+              //         $('.header').removeClass('fixed');
+              //         // クラスを外す
+              //       }
+              //     });
+              //   }
+        // $(window).scrollの位置がふさわしくない
+        //  $(window).scrollが一度監視状態になるとずっと監視状態になってしまう
+      
+        function fixedClass(){
+          let scrollAmount = $(window).scrollTop();
+          // console.log(scrollAmount);
+          if (widthSize > 767){
+            // もしwidthSizeが767以上だったら行う
+            // console.log('pc');
+            
+            if (scrollAmount > mvHeight ){
+              //もしスクロールした量がmvHeightを超えた(mvHeightより下のところを表示している時)時に行う
+              
+              $('.header').addClass('fixed');
+              // .headerに「fixed」というクラスをつける
+              
+            }else{
+              //もしスクロールした量がmvHeightを超ていない(mvHeightより上のところを表示している)時に行う
+              
+              $('.header').removeClass('fixed');
+              // .headerから「fixed」というクラスを外す
+              
+            }
+            
           }
+        }
+
+       $(window).resize(function(){
+            // ウィンドウが変更されるごとに関数を実行
+            widthSize = $(window).width();
+            // 画面幅の数値をとる
+            console.log(widthSize);
         });
 
-      }
+      $(window).scroll(function(){
+        fixedClass();
+
+      });
+
+      fixedClass();
+
     }
 
     addFixed();
 
-    $(window).resize(function(){
-      // ウィンドウが変更されるごとに関数を実行
-      addFixed();
-    });
 });
 
