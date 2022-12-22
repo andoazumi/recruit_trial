@@ -74,7 +74,7 @@ const img_path = assetsRelative() + 'img';
 <body id="<%= page_name; %>">
 
 <%# start page content -%>
-<div class="wrapper">
+<div class="wrapper" id="wrapper">
 
   <header class="header">
     <div class="header-wrapper">
@@ -354,11 +354,13 @@ const img_path = assetsRelative() + 'img';
         </div>
       </div>
     </div>
-      <div class="page-top">
-        <span class="material-symbols-outlined">
-          expand_less
-        </span>
-        <p class="txt">PAGE TOP</p>  
+      <div class="page-top-area">
+        <a href="#wrapper" class="page-top">
+          <span class="material-symbols-outlined">
+            expand_less
+          </span>
+          <p class="txt">PAGE TOP</p>  
+        </a>
       </div>
   </div>
   <div class="footer-bottom">
