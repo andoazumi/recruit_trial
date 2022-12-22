@@ -61,6 +61,10 @@
 
 html{
     font-size: 62.5%;
+    &.scroll-stop{
+        height: 100%;
+        overflow: hidden;
+    }
 }
 
 body{
@@ -1418,7 +1422,7 @@ img{
             margin-top: 12.5rem;
             .inner{
                 display: flex;
-                gap: 12rem;
+                gap: 15rem;
             }
 
             .txt-01{
