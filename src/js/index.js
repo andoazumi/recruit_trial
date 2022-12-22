@@ -37,6 +37,7 @@ import EVENTS from '~/constants/event-names';
     }else{
       headerElm.classList.add('on');
     }
+
   })
 
   /// /////////////////////////////////////////////////////// Resize
@@ -133,17 +134,24 @@ $(function(){
               //もしスクロールした量がmvHeightを超えた(mvHeightより下のところを表示している時)時に行う
               
               $('.header').addClass('fixed');
-              // .headerに「fixed」というクラスをつける
+              // .headerのところに「fixed」というクラスをつける
               
             }else{
               //もしスクロールした量がmvHeightを超ていない(mvHeightより上のところを表示している)時に行う
               
               $('.header').removeClass('fixed');
-              // .headerから「fixed」というクラスを外す
-              
+              // .headerのところから「fixed」というクラスを外す
             }
             
+          }else{
+            if($('.header').hasClass('fixed')){
+              // .headerのところにもし「fixed」クラスがあったら
+
+              $('.header').removeClass('fixed');
+              // .headerのところから「fixed」クラスを外す
+            }
           }
+
         }
 
        $(window).resize(function(){
@@ -163,6 +171,36 @@ $(function(){
     }
 
     addFixed();
+
+    $('a[href^="#"]').click(function(){
+      // #で始まるa要素をクリックいた場合に処理
+      // console.log('a','click');
+
+      let positionAdjust = 0;
+      // 移動先の調整。0pxのところへ。ここの数でずらせる
+
+      let scrollSpeed = 400;
+      // スクロールの速度(ミリ秒)
+
+      let getHref = $(this).attr("href");
+      // アンカーの値を取得。リンク先(href)を取得して代入
+      // console.log(getHref); // #wrapperが入っていたら成功
+
+      let landingTarget =$(getHref == '#' || getHref == "" ? 'html' : getHref);
+      // 移動先を取得。リンク先(herf)のidを探して、targetに代入
+      // console.log(aTarget);
+
+      let landingPosition = landingTarget.offset().top + positionAdjust;
+      // 移動先を調整。idの要素の位置をoffset()で取得してpositionに代入
+      // console.log(landingPosition);
+
+      $('body,html').animate({scrollTop:landingPosition}, scrollSpeed, 'swing');
+      // スムーススクロール。linear(等速)またはswing(変速)
+
+      return false;
+
+    });
+
 
 });
 
