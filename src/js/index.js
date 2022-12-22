@@ -23,6 +23,11 @@ import EVENTS from '~/constants/event-names';
   // 鈴木さんが作ってくださった、js記述のメニューボタン
   let aaa = document.querySelector('.menu-btn');
   const headerElm = document.querySelector('header');
+  // 取得したheader要素を代入
+
+  const htmlEl = document.documentElement;
+  // 取得したドキュメントのルート(最上位)の要素、すなわちすなわちhtml要素を代入
+
   let bbb = $(".menu-btn");
   aaa.addEventListener('click', function (event) {
     event.preventDefault(); // aタグなどのhtmlのデフォルトの動作をストップ
@@ -33,9 +38,22 @@ import EVENTS from '~/constants/event-names';
 
     // if文のもの作成
     if(headerElm.classList.contains('on')){
+      // header要素に「on」というクラスがあるとき
+
       headerElm.classList.remove('on');
+      // header要素から「on」というクラスを削除
+
+      htmlEl.classList.remove('scroll-stop');
+      // html要素から「scroll-stop」というクラスを削除
+
     }else{
+      // header要素に「on」というクラスがないとき
+
       headerElm.classList.add('on');
+      // header要素から「on」というクラスをつける
+
+      htmlEl.classList.add('scroll-stop');
+       // html要素から「scroll-stop」というクラスをつける
     }
 
   })
@@ -87,7 +105,7 @@ import EVENTS from '~/constants/event-names';
 $(function(){
   // htmlを読み込んでから
 
-  
+  // 追従メニュー==========
   function addFixed(){
     // 関数宣言
 
@@ -172,6 +190,8 @@ $(function(){
 
     addFixed();
 
+    
+    // smoothスクロール==========
     $('a[href^="#"]').click(function(){
       // #で始まるa要素をクリックいた場合に処理
       // console.log('a','click');
