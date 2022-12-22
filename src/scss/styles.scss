@@ -35,9 +35,9 @@
 // font-weight: 300;
 // font-style: normal;
 
-// font-family: "HiraKakuPro-W6";
+// font-family: "HiraKakuPro-W6",sans-serif;
 
-// font-family:HelveticaNeue;
+// font-family:HelveticaNeue,sans-serif;
 
 :root{
     --c-font:#444444;
@@ -156,7 +156,7 @@ img{
 }
 
 .mini-txt{
-    font-family:HelveticaNeue;
+    font-family:HelveticaNeue,sans-serif;
     font-size: 1.4rem;
     line-height: 1.85;
     // 26 / 14
@@ -219,7 +219,7 @@ img{
 
     nav{
         a{
-            font-family: "HiraKakuPro-W6";
+            font-family: "HiraKakuPro-W6",sans-serif;
             letter-spacing: 0.025em;
         }
     }
@@ -252,7 +252,7 @@ img{
         .menu-txt{
             font-size: 1.6rem;
             letter-spacing: normal;
-            font-family: "HiraKakuPro-W6";
+            font-family: "HiraKakuPro-W6",sans-serif;
         }
     }
 
