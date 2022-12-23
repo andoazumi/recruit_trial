@@ -192,12 +192,16 @@ $(function(){
 
     
     // smoothスクロール==========
+
+
+
     $('a[href^="#"]').click(function(){
       // #で始まるa要素をクリックいた場合に処理
       // console.log('a','click');
 
-      let positionAdjust = 0;
-      // 移動先の調整。0pxのところへ。ここの数でずらせる
+      let positionAdjust = $('.header-wrapper').outerHeight();
+      // 移動先の調整。ここの数でずらせる。ヘッダー分ずらしたいからヘッダーの高さを取ってくる
+      // console.log(positionAdjust);
 
       let scrollSpeed = 400;
       // スクロールの速度(ミリ秒)
@@ -210,7 +214,7 @@ $(function(){
       // 移動先を取得。リンク先(herf)のidを探して、targetに代入
       // console.log(aTarget);
 
-      let landingPosition = landingTarget.offset().top + positionAdjust;
+      let landingPosition = landingTarget.offset().top - positionAdjust;
       // 移動先を調整。idの要素の位置をoffset()で取得してpositionに代入
       // console.log(landingPosition);
 
