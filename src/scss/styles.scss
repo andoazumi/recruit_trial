@@ -639,7 +639,7 @@ img{
 
     //＝＝＝ header ＝＝＝
     .header{
-        position: absolute;
+        position: fixed;
         top: 0;
         z-index: 1;
         width: 100%;
@@ -743,7 +743,7 @@ img{
         .menu-body{
             height:calc(100vh - 6rem);
         }
-
+        
         .btn-line{
             margin-top: 0;
         }
@@ -1196,10 +1196,17 @@ img{
 
 
     .header.on{
+        animation: none;
         .logo{
             opacity: 0;
             visibility: hidden;
             pointer-events: none;
+        }
+
+        .menu-btn{
+            height: 8.8rem;
+            margin-left: 2rem;
+            margin-right: 0;
         }
 
         .btn-line{
