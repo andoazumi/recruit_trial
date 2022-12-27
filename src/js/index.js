@@ -37,23 +37,42 @@ import EVENTS from '~/constants/event-names';
     // headerElm.classList.remove('on');  // クラスをとる
 
     // if文のもの作成
-    if(headerElm.classList.contains('on')){
-      // header要素に「on」というクラスがあるとき
+    // if(headerElm.classList.contains('on')){
+    //   // header要素に「on」というクラスがあるとき
 
-      headerElm.classList.remove('on');
-      // header要素から「on」というクラスを削除
+    //   headerElm.classList.remove('on');
+    //   // header要素から「on」というクラスを削除
 
-      htmlEl.classList.remove('scroll-stop');
-      // html要素から「scroll-stop」というクラスを削除
+    //   htmlEl.classList.remove('scroll-stop');
+    //   // html要素から「scroll-stop」というクラスを削除
+
+    // }else{
+    //   // header要素に「on」というクラスがないとき
+
+    //   headerElm.classList.add('on');
+    //   // header要素から「on」というクラスをつける
+
+    //   htmlEl.classList.add('scroll-stop');
+    //    // html要素から「scroll-stop」というクラスをつける
+    // }
+
+    if(htmlEl.classList.contains('on')){
+      // html要素に「on」というクラスがあるとき
+
+      htmlEl.classList.remove('on');
+      // html要素から「on」というクラスを削除
+
+      // htmlEl.classList.remove('scroll-stop');
+      // // html要素から「scroll-stop」というクラスを削除
 
     }else{
-      // header要素に「on」というクラスがないとき
+      // html要素に「on」というクラスがないとき
 
-      headerElm.classList.add('on');
-      // header要素から「on」というクラスをつける
+      htmlEl.classList.add('on');
+      // html要素から「on」というクラスをつける
 
-      htmlEl.classList.add('scroll-stop');
-       // html要素から「scroll-stop」というクラスをつける
+      // htmlEl.classList.add('scroll-stop');
+      //  // html要素から「scroll-stop」というクラスをつける
     }
 
   })
@@ -199,6 +218,9 @@ $(function(){
       // #で始まるa要素をクリックいた場合に処理
       // console.log('a','click');
 
+      const htmlEl = document.documentElement;
+      // 取得したドキュメントのルート(最上位)の要素、すなわちすなわちhtml要素を代入
+
       let positionAdjust = $('.header-wrapper').outerHeight();
       // 移動先の調整。ここの数でずらせる。ヘッダー分ずらしたいからヘッダーの高さを取ってくる
       // console.log(positionAdjust);
@@ -221,9 +243,17 @@ $(function(){
       $('body,html').animate({scrollTop:landingPosition}, scrollSpeed, 'swing');
       // スムーススクロール。linear(等速)またはswing(変速)
 
-      return false;
+      if(htmlEl.classList.contains('on')){
+        // html要素に「on」というクラスがあるとき
+  
+        htmlEl.classList.remove('on');
+        // html要素から「on」というクラスを削除
+      }
 
+      return false;
     });
+
+
 
 
 });
