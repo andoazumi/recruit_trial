@@ -511,6 +511,10 @@ img{
     //     background: var(--c-navy);
     // }
 
+    .product-content{
+        cursor: pointer;
+    }
+
     .sub-title{
         &::before{
             background: var(--c-white);
@@ -565,6 +569,10 @@ img{
             background: var(--c-black-01);
             display: block;
             position: absolute;
+        }
+
+        .p-product__modal{
+            width: 100%;
         }
     }
 }
