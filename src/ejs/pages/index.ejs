@@ -59,6 +59,7 @@ const img_path = assetsRelative() + 'img';
   <!-- local CSS -->
   <%- include(INCLUDE_PATH + 'foundation/_styles', { css_path: assetsRelative() + 'css' }); -%>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,300,0,0" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
   <script>
     (function(d) {
       var config = {
@@ -236,7 +237,7 @@ const img_path = assetsRelative() + 'img';
         <div class="product-content-area">
 
           <div class="inner">
-            <div class="product-content">
+            <div class="product-content" data-slide-index="0">
               <div class="product-link">
                 <p class="img product-img"><img src="./assets/img/product-01.jpg" alt=""></p>
                 <div class="product-flex">
@@ -259,7 +260,7 @@ const img_path = assetsRelative() + 'img';
                 この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
               </p>
             </div>
-            <div class="product-content">
+            <div class="product-content" data-slide-index="1">
               <div class="product-link">
                 <p class="img product-img"><img src="./assets/img/product-02.jpg" alt=""></p>
                 <div class="product-flex">
@@ -282,7 +283,7 @@ const img_path = assetsRelative() + 'img';
                 この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
               </p>
             </div>
-            <div class="product-content">
+            <div class="product-content" data-slide-index="2">
               <div class="product-link">
                 <p class="img product-img"><img src="./assets/img/product-03.jpg" alt=""></p>
                 <div class="product-flex">
@@ -305,7 +306,7 @@ const img_path = assetsRelative() + 'img';
                 この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
               </p>
             </div>
-            <div class="product-content">
+            <div class="product-content" data-slide-index="3">
               <div class="product-link">
                 <p class="img product-img"><img src="./assets/img/product-04.jpg" alt=""></p>
                 <div class="product-flex">
@@ -330,6 +331,31 @@ const img_path = assetsRelative() + 'img';
             </div>
           </div>
 
+          <div class="p-product__modal-area" id="modal">
+            <div class="p-product__modal-bg"></div>
+            <div class="p-product__modal-contents">
+              <button class="p-product__modal-cb">×</button>
+              <div class="p-product__modal-swiper swiper">
+                <div class="p-product__modal-list swiper-wrapper ">
+                  <div class="p-product__modal swiper-slide">
+                    <p>スライド１</p>
+                  </div>
+                  <div class="p-product__modal swiper-slide">
+                    <p>スライド２</p>
+                  </div>
+                  <div class="p-product__modal swiper-slide">
+                    <p>スライド３</p>
+                  </div>
+                  <div class="p-product__modal swiper-slide">
+                    <p>スライド４</p>
+                  </div>
+                  <div class="p-product__modal-prev"></div>
+                  <div class="p-product__modal-next"></div>
+                </div>
+              </div>
+              </div>
+
+          </div>
 
         </div>
 
@@ -379,6 +405,7 @@ const img_path = assetsRelative() + 'img';
 
   <!-- local JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
   <%- include(INCLUDE_PATH + 'foundation/_scripts.ejs', { js_path: assetsRelative() + 'js' }); -%>
 
 </body>
