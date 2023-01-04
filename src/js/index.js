@@ -77,6 +77,41 @@ import EVENTS from '~/constants/event-names';
 
   })
 
+  window.addEventListener("DOMContentLoaded",() => {
+    const modal = document.getElementById("modal");
+    // モーダルを取得
+
+    const openModalBtns = document.querySelectorAll(".product-content");
+    // product-content(モーダルを表示するもの)を全て取得
+
+    const closeModalBtns = document.querySelectorAll(".p-product__modal-cb");
+    // モーダルを閉じるボタン
+    
+    const swiper = new Swiper(".swiper",{
+      navigation:{
+        prevEL:"p-product__modal-prev",
+        nextEl:"p-product__modal-next",
+      }
+    });
+
+    // product-contentをクリックしたとき
+    openModalBtns.forEach((openModalBtn) => {
+      openModalBtn.addEventListener("click",() => {
+        // data-slide-indexに設定したスライド番号を取得
+        const modalIndex = openModalBtn.dataset.slideIndex;
+        swiper.slideTo(modalIndex);
+        modal.classList.add("is-active");
+      });
+    });
+
+    // モーダルを閉じるボタンをクリックしたとき
+    closeModalBtns.forEach((closeModalBtn) => {
+      closeModalBtn.addEventListener("click",() => {
+        modal.classList.remove("is-active");
+      });
+    });
+    
+  });
   /// /////////////////////////////////////////////////////// Resize
   // ccc = 要素高さ;
   function onResize() {
@@ -252,9 +287,6 @@ $(function(){
 
       return false;
     });
-
-
-
 
 });
 
