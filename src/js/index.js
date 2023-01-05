@@ -87,11 +87,14 @@ import EVENTS from '~/constants/event-names';
     const closeModalBtns = document.querySelectorAll(".p-product__modal-cb");
     // モーダルを閉じるボタン
     
-    const swiper = new Swiper(".swiper",{
+    const swiperMain = new Swiper(".p-product__modal-swiper-main",{
       navigation:{
         prevEL:"p-product__modal-prev",
         nextEl:"p-product__modal-next",
       }
+    });
+
+    const swiperSub = new Swiper(".p-product__modal-swiper-sub",{
     });
 
     // product-contentをクリックしたとき
@@ -99,7 +102,7 @@ import EVENTS from '~/constants/event-names';
       openModalBtn.addEventListener("click",() => {
         // data-slide-indexに設定したスライド番号を取得
         const modalIndex = openModalBtn.dataset.slideIndex;
-        swiper.slideTo(modalIndex);
+        swiperMain.slideTo(modalIndex);
         modal.classList.add("is-active");
       });
     });
