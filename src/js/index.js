@@ -88,13 +88,25 @@ import EVENTS from '~/constants/event-names';
     // モーダルを閉じるボタン
     
     const swiperMain = new Swiper(".p-product__modal-swiper-main",{
+      pagination: {
+        el: '.swiper-pagination-main',
+        type: 'fraction',
+      },
       navigation:{
-        prevEL:"p-product__modal-prev",
-        nextEl:"p-product__modal-next",
+        prevEL:"p-product__modal-main-prev",
+        nextEl:"p-product__modal-main-next",
       }
     });
 
     const swiperSub = new Swiper(".p-product__modal-swiper-sub",{
+      pagination: {
+        el: '.swiper-pagination-sub',
+        type: 'fraction',
+      },
+      navigation:{
+        prevEL:"p-product__modal-sub-prev",
+        nextEl:"p-product__modal-sub-next",
+      }
     });
 
     // product-contentをクリックしたとき
