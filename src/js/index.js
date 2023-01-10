@@ -104,7 +104,7 @@ import EVENTS from '~/constants/event-names';
         type: 'fraction',
       },
       navigation:{
-        prevEL:"p-product__modal-sub-prev",
+        prevEl:"p-product__modal-sub-prev",
         nextEl:"p-product__modal-sub-next",
       }
     });
