@@ -59,7 +59,8 @@ const img_path = assetsRelative() + 'img';
   <!-- local CSS -->
   <%- include(INCLUDE_PATH + 'foundation/_styles', { css_path: assetsRelative() + 'css' }); -%>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,300,0,0" />
-  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://unpkg.com/swiper@8/swiper.min.css">
+
   <script>
     (function(d) {
       var config = {
@@ -342,7 +343,7 @@ const img_path = assetsRelative() + 'img';
                   <div class="p-product__modal swiper-slide">
                     <div class="mainSlide">
                      
-                      <div class="p-product__modal-swiper-sub">
+                      <div class="p-product__modal-swiper-sub swiper">
                         <div class="p-product__modal-sub-slide-list swiper-wrapper">
                           <div class="p-product__modal-sub-slide swiper-slide">
                               <div class="subSlide">
@@ -390,32 +391,31 @@ const img_path = assetsRelative() + 'img';
                       
                     </div>
                   </div>
-
                   <div class="p-product__modal swiper-slide">
-                      <div class="mainSlide">
-                        <p>スライド２</p>
-                        <p class="img"><img src="./assets/img/product-02.jpg" alt=""></p>
-                      </div>
+                    <div class="mainSlide">
+                      <p>スライド２</p>
+                      <p class="img"><img src="./assets/img/product-02.jpg" alt=""></p>
                     </div>
-                    <div class="p-product__modal swiper-slide">
-                      <div class="mainSlide">
-                        <p>スライド３</p>
-                        <p class="img"><img src="./assets/img/product-03.jpg" alt=""></p>
-                      </div>
-                    </div>
-                    <div class="p-product__modal swiper-slide">
-                      <div class="mainSlide">
-                        <p>スライド４</p>  
-                        <p class="img"><img src="./assets/img/product-04.jpg" alt=""></p>
-                      </div>
-                    </div>
-
                   </div>
+                  <div class="p-product__modal swiper-slide">
+                    <div class="mainSlide">
+                      <p>スライド３</p>
+                      <p class="img"><img src="./assets/img/product-03.jpg" alt=""></p>
+                    </div>
+                  </div>
+                  <div class="p-product__modal swiper-slide">
+                    <div class="mainSlide">
+                      <p>スライド４</p>  
+                      <p class="img"><img src="./assets/img/product-04.jpg" alt=""></p>
+                    </div>
+                  </div>
+
                 </div>
-                <div class="p-product__modal-main-prev"></div>
-                <div class="swiper-pagination-main"></div>
-                <div class="p-product__modal-main-next"></div>
+                <!-- </div> -->
               </div>
+              <div class="p-product__modal-main-prev"></div>
+              <div class="swiper-pagination-main"></div>
+              <div class="p-product__modal-main-next"></div>
             </div>
 
 
@@ -518,7 +518,7 @@ const img_path = assetsRelative() + 'img';
 
   <!-- local JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
   <%- include(INCLUDE_PATH + 'foundation/_scripts.ejs', { js_path: assetsRelative() + 'js' }); -%>
 
 </body>
