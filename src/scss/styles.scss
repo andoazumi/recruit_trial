@@ -575,6 +575,24 @@ img{
             width: 100%;
         }
     }
+
+    .swiper-pagination-fraction{
+        text-align: center;
+    }
+
+    .p-product__modal-title{
+        font-family: noto-sans-cjk-jp,sans-serif;
+        font-weight: 700;
+    }
+
+    .p-product__modal-ts{
+        font-family: lato,sans-serif;
+        font-weight: 500;
+    }
+
+    .p-product__modal-txt{
+        letter-spacing: 0.025em;
+    }
 }
 
 .product .title,
