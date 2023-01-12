@@ -84,22 +84,41 @@ import EVENTS from '~/constants/event-names';
   // モーダルのことを書く
   function settingModal(){
     console.log('wa');
-    const opnModal = document.querySelectorAll('.p-product__modal');
+    const openModal = document.querySelectorAll('.product-content');
+    // クリックしたらモーダルが展開する箇所すべて
+    // console.log(openModal);
+    // 配列で四つ取れている
 
     const modalArea = document.querySelector('.p-product__modal-area');
+    // モーダルのエリアを取得
 
     const overlay = document.querySelector('.p-product__modal-bg');
+    // モーダルの黒い背景の箇所を取得
 
     const closeBtn = document.querySelector('.p-product__modal-cb')
+    // モーダルの閉じるボタンを取得
 
-    
+    // product-content内をクリックしたら、is-showをつける
+    openModal.forEach(function(elm){
+      // forEachは耐えられた関数を配列の各要素に対して一つずつ実行する。
+      // console.log(elm);
+      elm.addEventListener('click',function(){
+        modalArea.classList.add('is-show');
+      });
+    });
+    // openModal.addEventListener('click',function(){
+    //   modalArea.classList.toggle('is-show');
+    // },false);
+    // 「openModal.addEventListener is not a function」て出る
 
+    // モーダルの黒い背景の箇所をクリックしたら、is-showをつける・外す
     overlay.addEventListener('click',function(){
       modalArea.classList.toggle('is-show');
     },false);
 
+    // モーダルの
     closeBtn.addEventListener('click',function(){
-      modalArea.classList.toggle('is-show');
+      modalArea.classList.remove('is-show');
     },false);
 
   }
