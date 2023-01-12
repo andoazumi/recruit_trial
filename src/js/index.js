@@ -100,7 +100,7 @@ import EVENTS from '~/constants/event-names';
 
     // product-content内をクリックしたら、is-showをつける
     openModal.forEach(function(elm){
-      // forEachは耐えられた関数を配列の各要素に対して一つずつ実行する。
+      // forEachは与えられた関数を配列の各要素に対して一つずつ実行する。
       // console.log(elm);
       elm.addEventListener('click',function(){
         modalArea.classList.add('is-show');
@@ -126,6 +126,7 @@ import EVENTS from '~/constants/event-names';
   //スライダーのことを書く
   function settingSwiper(){
 
+    // ////swiperのベース
     const swiperMain = new Swiper(".p-product__modal-swiper-main",{
       pagination: {
         el: '.swiper-pagination-main',
@@ -140,8 +141,8 @@ import EVENTS from '~/constants/event-names';
           prevEl: ".swiper-button-prev",
         },
       });
-      
-      // swaiperの入れ子
+
+      // //////swaiperの入れ子
       // const swiperSub = new Swiper(".p-product__modal-swiper-sub",{
         //   pagination: {
           //     el: '.swiper-pagination-sub',
@@ -152,40 +153,44 @@ import EVENTS from '~/constants/event-names';
             //     nextEl:".p-product__modal-sub-next",
             //   }
             // });
+
+        // //////
+
+          // ////// コピペ改良
+            // const modal = document.getElementById("modal");
+          //   // モーダルを取得
+        
+            const openModalBtns = document.querySelectorAll(".product-content");
+          //   // product-content(モーダルを表示するもの)を全て取得
+        
+            // const closeModalBtns = document.querySelectorAll(".p-product__modal-cb");
+          //   // モーダルを閉じるボタン
+            
+        
+        
+          
+          //   // product-contentをクリックしたとき
+            openModalBtns.forEach((openModalBtn) => {
+
+              openModalBtn.addEventListener("click",() => {
+          //       // data-slide-indexに設定したスライド番号を取得
+                const modalIndex = openModalBtn.dataset.slideIndex;
+                swiperMain.slideTo(modalIndex);
+                // modal.classList.add("is-active");
+              });
+            });
+        
+          // //   // モーダルを閉じるボタンをクリックしたとき
+          //   closeModalBtns.forEach((closeModalBtn) => {
+          //     closeModalBtn.addEventListener("click",() => {
+          //       modal.classList.remove("is-active");
+          //     });
+          //   });
+          // コピペ改良ここまで
           }
           
-  // window.addEventListener("DOMContentLoaded",() => {
-  //   // 
 
-  //   const modal = document.getElementById("modal");
-  //   // モーダルを取得
-
-  //   const openModalBtns = document.querySelectorAll(".product-content");
-  //   // product-content(モーダルを表示するもの)を全て取得
-
-  //   const closeModalBtns = document.querySelectorAll(".p-product__modal-cb");
-  //   // モーダルを閉じるボタン
     
-
-
-  //   // product-contentをクリックしたとき
-  //   openModalBtns.forEach((openModalBtn) => {
-  //     openModalBtn.addEventListener("click",() => {
-  //       // data-slide-indexに設定したスライド番号を取得
-  //       const modalIndex = openModalBtn.dataset.slideIndex;
-  //       swiperMain.slideTo(modalIndex);
-  //       modal.classList.add("is-active");
-  //     });
-  //   });
-
-  //   // モーダルを閉じるボタンをクリックしたとき
-  //   closeModalBtns.forEach((closeModalBtn) => {
-  //     closeModalBtn.addEventListener("click",() => {
-  //       modal.classList.remove("is-active");
-  //     });
-  //   });
-    
-  // });
   /// /////////////////////////////////////////////////////// Resize
   // ccc = 要素高さ;
   function onResize() {
