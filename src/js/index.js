@@ -111,12 +111,14 @@ import EVENTS from '~/constants/event-names';
     // },false);
     // 「openModal.addEventListener is not a function」て出る
 
-    // モーダルの黒い背景の箇所をクリックしたら、is-showをつける・外す
+    // モーダルの黒い背景の箇所をクリックしたら、is-showを外す
     overlay.addEventListener('click',function(){
-      modalArea.classList.toggle('is-show');
+      // modalArea.classList.toggle('is-show');
+      // ↑参考にしたサイト元々にあったやつ
+      modalArea.classList.remove('is-show');
     },false);
 
-    // モーダルの
+    // モーダルの閉じるボタンを押した時に、is-showを外す
     closeBtn.addEventListener('click',function(){
       modalArea.classList.remove('is-show');
     },false);
