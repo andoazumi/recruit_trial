@@ -81,115 +81,191 @@ import EVENTS from '~/constants/event-names';
         })
    }
         
-  // モーダルのことを書く
-  function settingModal(){
-    console.log('wa');
-    const openModal = document.querySelectorAll('.product-content');
-    // クリックしたらモーダルが展開する箇所すべて
-    // console.log(openModal);
-    // 配列で四つ取れている
+  // // モーダルのことを書く
+  // function settingModal(){
+  //   console.log('wa');
+  //   const openModal = document.querySelectorAll('.product-content');
+  //   // クリックしたらモーダルが展開する箇所すべて
+  //   // console.log(openModal);
+  //   // 配列で四つ取れている
 
-    const modalArea = document.querySelector('.p-product__modal-area');
-    // モーダルのエリアを取得
+  //   const modalArea = document.querySelector('.p-product__modal-area');
+  //   // モーダルのエリアを取得
 
-    const overlay = document.querySelector('.p-product__modal-bg');
-    // モーダルの黒い背景の箇所を取得
+  //   const overlay = document.querySelector('.p-product__modal-bg');
+  //   // モーダルの黒い背景の箇所を取得
 
-    const closeBtn = document.querySelector('.p-product__modal-cb')
-    // モーダルの閉じるボタンを取得
+  //   const closeBtn = document.querySelector('.p-product__modal-cb')
+  //   // モーダルの閉じるボタンを取得
 
-    // product-content内をクリックしたら、is-showをつける
-    openModal.forEach(function(elm){
-      // forEachは与えられた関数を配列の各要素に対して一つずつ実行する。
-      // console.log(elm);
-      elm.addEventListener('click',function(){
-        modalArea.classList.add('is-show');
-      });
-    });
-    // openModal.addEventListener('click',function(){
-    //   modalArea.classList.toggle('is-show');
-    // },false);
-    // 「openModal.addEventListener is not a function」て出る
+  //   // product-content内をクリックしたら、is-showをつける
+  //   openModal.forEach(function(elm){
+  //     // forEachは与えられた関数を配列の各要素に対して一つずつ実行する。
+  //     // console.log(elm);
+  //     elm.addEventListener('click',function(){
+  //       modalArea.classList.add('is-show');
+  //     });
+  //   });
+  //   // openModal.addEventListener('click',function(){
+  //   //   modalArea.classList.toggle('is-show');
+  //   // },false);
+  //   // 「openModal.addEventListener is not a function」て出る
 
-    // モーダルの黒い背景の箇所をクリックしたら、is-showを外す
-    overlay.addEventListener('click',function(){
-      // modalArea.classList.toggle('is-show');
-      // ↑参考にしたサイト元々にあったやつ
-      modalArea.classList.remove('is-show');
-    },false);
+  //   // モーダルの黒い背景の箇所をクリックしたら、is-showを外す
+  //   overlay.addEventListener('click',function(){
+  //     // modalArea.classList.toggle('is-show');
+  //     // ↑参考にしたサイト元々にあったやつ
+  //     modalArea.classList.remove('is-show');
+  //   },false);
 
-    // モーダルの閉じるボタンを押した時に、is-showを外す
-    closeBtn.addEventListener('click',function(){
-      modalArea.classList.remove('is-show');
-    },false);
+  //   // モーダルの閉じるボタンを押した時に、is-showを外す
+  //   closeBtn.addEventListener('click',function(){
+  //     modalArea.classList.remove('is-show');
+  //   },false);
+  // }
 
-  }
+  // //スライダーのことを書く
+  // function settingSwiper(){
 
-  //スライダーのことを書く
-  function settingSwiper(){
+  //   // ////swiperのベース
+  //   const swiperMain = new Swiper(".p-product__modal-swiper-main",{
+  //     pagination: {
+  //       el: '.p-product__modal-page-main',
+  //       // el: '.swiper-pagination-main',
+  //       type: 'fraction',
+  //     },
+  //     // navigation:{
+  //       //   prevEL:".p-product__modal-main-prev",
+  //       //   nextEl:".p-product__modal-main-next",
+  //       // },
+  //       navigation: {
+  //         nextEl: ".swiper-button-next",
+  //         prevEl: ".swiper-button-prev",
+  //       },
+  //     });
 
-    // ////swiperのベース
-    const swiperMain = new Swiper(".p-product__modal-swiper-main",{
-      pagination: {
-        el: '.swiper-pagination-main',
-        type: 'fraction',
-      },
-      // navigation:{
-        //   prevEL:".p-product__modal-main-prev",
-        //   nextEl:".p-product__modal-main-next",
-        // },
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-      });
+  //     // //////swaiperの入れ子
+  //     // const swiperSub = new Swiper(".p-product__modal-swiper-sub",{
+  //       //   pagination: {
+  //         //     el: '.swiper-pagination-sub',
+  //         //     type: 'fraction',
+  //         //   },
+  //         //   navigation:{
+  //           //     prevEl:".p-product__modal-sub-prev",
+  //           //     nextEl:".p-product__modal-sub-next",
+  //           //   }
+  //           // });
 
-      // //////swaiperの入れ子
-      // const swiperSub = new Swiper(".p-product__modal-swiper-sub",{
-        //   pagination: {
-          //     el: '.swiper-pagination-sub',
-          //     type: 'fraction',
-          //   },
-          //   navigation:{
-            //     prevEl:".p-product__modal-sub-prev",
-            //     nextEl:".p-product__modal-sub-next",
-            //   }
-            // });
+  //       // //////
 
-        // //////
-
-          // ////// コピペ改良
-            // const modal = document.getElementById("modal");
-          //   // モーダルを取得
+  //         // ////// コピペ改良
+  //           // const modal = document.getElementById("modal");
+  //         //   // モーダルを取得
         
-            const openModalBtns = document.querySelectorAll(".product-content");
-          //   // product-content(モーダルを表示するもの)を全て取得
+  //           const openModalBtns = document.querySelectorAll(".product-content");
+  //         //   // product-content(モーダルを表示するもの)を全て取得
         
-            // const closeModalBtns = document.querySelectorAll(".p-product__modal-cb");
-          //   // モーダルを閉じるボタン
+  //           // const closeModalBtns = document.querySelectorAll(".p-product__modal-cb");
+  //         //   // モーダルを閉じるボタン
             
         
         
           
-          //   // product-contentをクリックしたとき
-            openModalBtns.forEach((openModalBtn) => {
+  //         //   // product-contentをクリックしたとき
+  //           openModalBtns.forEach((openModalBtn) => {
 
-              openModalBtn.addEventListener("click",() => {
-          //       // data-slide-indexに設定したスライド番号を取得
-                const modalIndex = openModalBtn.dataset.slideIndex;
-                swiperMain.slideTo(modalIndex);
-                // modal.classList.add("is-active");
-              });
-            });
+  //             openModalBtn.addEventListener("click",() => {
+  //         //       // data-slide-indexに設定したスライド番号を取得
+  //               const modalIndex = openModalBtn.dataset.slideIndex;
+  //               swiperMain.slideTo(modalIndex);
+  //               // modal.classList.add("is-active");
+  //             });
+  //           });
         
-          // //   // モーダルを閉じるボタンをクリックしたとき
-          //   closeModalBtns.forEach((closeModalBtn) => {
-          //     closeModalBtn.addEventListener("click",() => {
-          //       modal.classList.remove("is-active");
-          //     });
-          //   });
-          // コピペ改良ここまで
-          }
+  //         // //   // モーダルを閉じるボタンをクリックしたとき
+  //         //   closeModalBtns.forEach((closeModalBtn) => {
+  //         //     closeModalBtn.addEventListener("click",() => {
+  //         //       modal.classList.remove("is-active");
+  //         //     });
+  //         //   });
+  //         // コピペ改良ここまで
+  //       }
+
+
+        // //////モーダルのことを書く 書き直し
+  function settingModal(){
+    console.log('waa');
+    // クリックしたらモーダルが展開する箇所すべて
+    const openModal = document.querySelectorAll('.product-content');
+    // console.log(openModal);
+    // 配列で四つ取れている
+
+    // モーダルのエリアを取得
+    const modalArea = document.querySelector('.p-product__modal-area');
+
+    // モーダルの黒い背景の箇所を取得
+    const overlay = document.querySelector('.p-product__modal-bg');
+
+    // モーダルの閉じるボタンを取得
+    const closeBtn = document.querySelector('.p-product__modal-cb');
+
+    // product-content内をクリックしたら、is-showをつける
+    openModal.forEach(function(elm){
+        // forEachは与えられた関数を配列の各要素に対して一つずつ実行する。
+        // console.log(elm);
+      elm.addEventListener('click',function(){
+        // .product-contentをクリックした時に実行する
+        modalArea.classList.add('is-show');
+      });
+    });
+    
+    // モーダルの黒い背景の箇所をクリックしたら、is-showを外す
+      overlay.addEventListener('click',function(){
+        modalArea.classList.remove('is-show');
+      },false);
+
+    // モーダルの閉じるボタンを押した時に、is-showを外す
+    closeBtn.addEventListener('click',function(){
+      modalArea.classList.remove('is-show');
+    });
+    
+  }
+  // //////モーダルのことを書く 書き直し ここまで
+        
+  
+  // //////スライダーのことを書く 描き直し
+  function settingSwiper(){
+
+    // swiperのベース
+    const swiperMain =new Swiper(".p-product__modal-swiper-main",{
+      pagination:{
+        el:'.p-product__modal-page-main',
+        type:'fraction',
+      },
+      navigation:{
+        nextEl:'.swiper-button-next',
+        prevEl:'.swiper-button-prev',
+      }
+    });
+
+    // クリックした箇所を表示させる
+    // product-content(モーダルを表示するもの)を全て取得
+    const openModalBtns = document.querySelectorAll(".product-content");
+
+    openModalBtns.forEach((openModalBtn) => {
+      // product-contentをクリックしたとき
+      
+      openModalBtn.addEventListener("click",() => {
+        const modalIndex = openModalBtn.dataset.slideIndex;
+          // data-slide-indexに設定したスライド番号を取得
+        swiperMain.slideTo(modalIndex);
+          // 該当する番号へスライドさせる 
+      });
+    });        
+  }
+  
+  // //////スライダーのことを書く 描き直しここまで
+
           
 
     
@@ -375,4 +451,6 @@ $(function(){
     });
 
 });
+
+
 
