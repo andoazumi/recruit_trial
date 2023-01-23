@@ -622,11 +622,12 @@ img{
 
     .p-product__modal-txt-area{
         background: var(--c-white);
-        .p-product__modal-inner{
-            margin-left: auto;
-            margin-right: auto;
-         }
     }
+
+    .p-product__modal-inner{
+        margin-left: auto;
+        margin-right: auto;
+     }
 
     
     .p-product__modal-title{
@@ -1094,10 +1095,11 @@ img{
 
         .p-product__modal-txt-area{
             padding-bottom: 2.5rem;
-            .p-product__modal-inner{
-                width: unquote('min(calc(335vw * 100 / 375),33.5rem)');
-             }
         }
+        
+        .p-product__modal-inner{
+            width: unquote('min(calc(335vw * 100 / 375),33.5rem)');
+         }
         
         .p-product__modal-tm{
             margin-top: 1.1rem;
