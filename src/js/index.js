@@ -248,6 +248,16 @@ import EVENTS from '~/constants/event-names';
       }
     });
 
+    const myModalSwiperSub = new Swiper(".js-modal-swiper-sub", {
+      spaceBetween: 30,
+      grabCursor: true,
+      nested: true,
+      pagination: {
+        el: '.swiper-pagination-sub',
+        clickable: true,
+      },
+    });
+
     // クリックした箇所を表示させる
     // product-content(モーダルを表示するもの)を全て取得
     const openModalBtns = document.querySelectorAll(".product-content");
