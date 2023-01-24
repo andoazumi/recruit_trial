@@ -247,6 +247,10 @@ import EVENTS from '~/constants/event-names';
         prevEl:'.swiper-button-prev',
       }
     });
+    
+    const sliderThumbnail = new Swiper(".slider-thumbnail", {
+      slidesPerView: 4, // サムネイルの枚数
+    });
 
     const myModalSwiperSub = new Swiper(".js-modal-swiper-sub", {
       spaceBetween: 30,
@@ -256,7 +260,12 @@ import EVENTS from '~/constants/event-names';
         el: '.swiper-pagination-sub',
         clickable: true,
       },
+      thumbs: {
+        swiper: sliderThumbnail,
+      },
     });
+
+
 
     // クリックした箇所を表示させる
     // product-content(モーダルを表示するもの)を全て取得
