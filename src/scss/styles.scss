@@ -751,6 +751,7 @@ img{
     //＝＝＝ common ＝＝＝
     .pc{
         display: none;
+        visibility: hidden;
     }
 
     .inner{
@@ -1195,6 +1196,7 @@ img{
     //＝＝＝ common ＝＝＝
     .sp{
         display: none;
+        visibility: hidden;
     }
 
     .wrapper{
@@ -1873,6 +1875,35 @@ img{
         .p-product__modal-oi{
             margin-top: 10.6rem;
         }
+
+        .swiper-slide img {
+            max-width: 100%;
+            height: auto;
+          }
+          .thumb-list {
+            max-width: 600px;
+            width: 100%;
+            margin: auto;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+          }
+          .thumb-item {
+            flex: 0 0 32%;//1行に表示するサムネイルの数を指定
+          }
+          .thumb-item img {
+            max-width: 100%;
+            height: auto;
+          }
+          .thumb-link {
+            display: block;
+          }
+          .swiper-arrow {
+            position: relative;
+            max-width: 700px;
+            width: 100%;
+            margin: auto;
+          }
 
 
     }
