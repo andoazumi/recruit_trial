@@ -201,13 +201,13 @@ import EVENTS from '~/constants/event-names';
     // 配列で四つ取れている
 
     // モーダルのエリアを取得
-    const modalArea = document.querySelector('.p-product__modal-area');
+    const modalArea = document.querySelector('.p-modal');
 
     // モーダルの黒い背景の箇所を取得
-    const overlay = document.querySelector('.p-product__modal-bg');
+    const overlay = document.querySelector('.c-overay');
 
     // モーダルの閉じるボタンを取得
-    const closeBtn = document.querySelector('.p-product__modal-cb');
+    const closeBtn = document.querySelector('.c-cb');
 
     // product-content内をクリックしたら、is-showをつける
     openModal.forEach(function(elm){
@@ -237,33 +237,53 @@ import EVENTS from '~/constants/event-names';
   function settingSwiper(){
 
     // swiperのベース
-    const swiperMain =new Swiper(".p-product__modal-swiper-main",{
+    const swiperMain =new Swiper(".p-swiper--main",{
       pagination:{
         el:'.p-product__modal-page-main',
         type:'fraction',
       },
       navigation:{
-        nextEl:'.swiper-button-next',
-        prevEl:'.swiper-button-prev',
+        nextEl:'.p-product__modal-main-next',
+        prevEl:'.p-product__modal-main-prev',
       }
     });
-    
-    const sliderThumbnail = new Swiper(".slider-thumbnail", {
-      slidesPerView: 4, // サムネイルの枚数
+
+    // const sliderThumbnail = new Swiper(".slider-thumbnail", {
+    //   slidesPerView: 4, // サムネイルの枚数
+    // });
+
+    const swiperThumbnail = new Swiper(".p-thumbnail--one",{
+      slidesPerView: 4,
     });
 
-    const myModalSwiperSub = new Swiper(".js-modal-swiper-sub", {
-      spaceBetween: 30,
+    const myModalSwiperSub = new Swiper(".p-swiper--subOne", {
+      spaceBetween: 100,
       grabCursor: true,
       nested: true,
       pagination: {
-        el: '.swiper-pagination-sub',
+        el: '.p-swiper--subOne__page',
         clickable: true,
       },
+      navigation:{
+        nextEl:'.p-swiper--subOne__next',
+        prevEl:'.p-swiper--subOne__prev',
+      },
       thumbs: {
-        swiper: sliderThumbnail,
+        swiper: swiperThumbnail,
+        // swiper: sliderThumbnail,
       },
     });
+
+  //   const swiperSub = new Swiper({"",
+  //   pagination:{
+  //     el:'.p-product__modal-page-main',
+  //     type:'fraction',
+  //   },
+  //   navigation:{
+  //     nextEl:'.p-product__modal-main-next',
+  //     prevEl:'.p-product__modal-main-prev',
+  //   }
+  // });
 
 
 
