@@ -333,20 +333,20 @@ const img_path = assetsRelative() + 'img';
             </div>
           </div>
 
-          <div class="p-modal" id="modal">
-            <div class="c-overay"></div>
+          <!-- <div class="p-product__modal-area p-modal" id="modal">
+            <div class="p-product__modal-bg c-overay"></div>
             
-            <div class="p-modal__contents">
-              <div class="c-cb">
+            <div class="p-product__modal-contents p-modal__contents">
+              <div class="p-product__modal-cb c-cb">
                 <span>×</span>
               </div>
 
-              <div class="p-swiper">
-                <!-- ↑矢印の調整のために追加 -->
-                <div class="swiper p-swiper--main">
-                  <div class="swiper-wrapper p-swiper--main__list">
-                    <div class="swiper-slide p-swiper--main__item">
-                      <div class="p-swiper--main__slide">
+              <div class="p-product__swiper-container p-modal__container p-swiper">
+           
+                <div class="p-product__modal-swiper-main swiper p-swiper--main">
+                  <div class="p-product__modal-list swiper-wrapper p-swiper--main__list">
+                    <div class="p-product__modal-items swiper-slide p-swiper--main__item">
+                      <div class="p-product__modal-main-slide p-swiper--main__slide">
              
                           <div class="p-product__modal-swiper-sub swiper js-modal-swiper-sub p-swiper--sub p-swiper--subOne">
                             <div class=" swiper-wrapper p-swiper--sub__list">
@@ -371,15 +371,120 @@ const img_path = assetsRelative() + 'img';
                                 </div>
                               </div>
                               
-                            </div><!-- /swiper-wrapper -->
+                            </div>
                             <div class="swiper-pagination-sub p-swiper--subOne__page"></div>
                             <div class="swiper-button-prev p-swiper__prev p-swiper--subOne__prev"></div>
                             <div class="swiper-button-next p-swiper__next p-swiper--subOne__next"></div>
                           </div>
                  
+                        <div class="p-product__modal-txt-area p-modal__txt">
+                          <div class="p-product__modal-inner  p-modal__txt__inner c-modal__txt">
+                            <p class="p-product__modal-title pc txt c-modal__txt__ttl">
+                              ダミーダミーダミー
+                            </p>
+                            <p class="p-product__modal-ts p-product__modal-spec txt c-modal__txt__ts">
+                              SPEC
+                            </p>
+                            <p class="p-product__modal-tm txt c-modal__txt__tm">
+                              この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
+                            </p>
+                            <p class="p-product__modal-txt txt c-modal__txt">
+                              この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するた
+                            </p>
+                            <p class="p-product__modal-ts p-product__modal-oi pc txt c-modal__txt__oi">
+                              OTHER IMAGES
+                            </p>
+                          </div>
+                  
+                          <div class="swiper slider-thumbnail pc p-thumbnail p-thumbnail--one">
+                            <div class="swiper-wrapper p-thumbnail__list">
+                              <div class="swiper-slide p-thumbnail__item">
+                                <img src="./assets/img/product-01.jpg" alt="" class="c-thumbnail">
+                              </div>
+                              <div class="swiper-slide">
+                                <img src="./assets/img/square-gray.jpg" alt="">
+                              </div>
+                              <div class="swiper-slide c-">
+                                <img src="./assets/img/product-01.jpg" alt="">
+                              </div>
+                              <div class="swiper-slide">
+                                <img src="./assets/img/square-gray.jpg" alt="">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="p-product__modal-items swiper-slide p-swiper--main__item">
+                      <div class="p-product__modal-main-slide p-swiper--main__slide">
+                        <p class="p-product__modal-img img p-swiper--main__img"><img src="./assets/img/product-02.jpg" alt=""></p>
+                      </div>
+                    </div>
+                    <div class="p-product__modal-items swiper-slide p-swiper--main__item">
+                      <div class="p-product__modal-main-slide p-swiper--main__slide">
+                        <p class="p-product__modal-img img p-swiper--main__img"><img src="./assets/img/product-03.jpg" alt=""></p>
+                      </div>
+                    </div>
+                    <div class="p-product__modal-items swiper-slide p-swiper--main__item">
+                      <div class="p-product__modal-main-slide p-swiper--main__slide">
+                        <p class="p-product__modal-img img p-swiper--main__img"><img src="./assets/img/product-04.jpg" alt=""></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="p-product__modal-page-main sp p-swiper--main__page"></div>
+                <div class="p-product__modal-main-prev swiper-button-prev  p-swiper__prev p-swiper--main__prev"></div>
+                <div class="p-product__modal-main-next swiper-button-next p-swiper__next p-swiper--main__next"></div>
+              </div>
+            </div>
+
+          </div> -->
+
+          <div class="p-modal">
+            <div class="c-overay"></div>
+
+            <div class="p-modal__contents">
+              <div class="c-cb">
+                <span>×</span>
+              </div>
+
+              <div class="p-swiper swiper-container">
+                <div class="swiper p-swiper--main">
+                  <div class="swiper-wrapper p-swiper--main__list">
+
+                    <div class="swiper-slide p-swiper--main__item">
+                      <div class="p-swiper--main__slide">
+                        <div class="swiper p-swiper--sub p-swiper--subOne">
+                          <div class="swiper-wrapper p-swiper--sub__list">
+                            <div class="swiper-slide p-swiper--sub__item">
+                              <div class="p-swiper--sub__slide">
+                                <p class="c-panel"><img src="./assets/img/product-01.jpg" alt=""></p>
+                              </div>
+                            </div>
+                            <div class="swiper-slide p-swiper--sub__item">
+                              <div class="p-swiper--sub__slide">
+                                <p class="c-panel"><img src="./assets/img/square-gray.jpg" alt=""></p>
+                              </div>
+                            </div>
+                            <div class="swiper-slide p-swiper--sub__item">
+                              <div class="p-swiper--sub__slide">
+                                <p class="c-panel"><img src="./assets/img/product-01.jpg" alt=""></p>
+                              </div>
+                            </div>
+                            <div class="swiper-slide p-swiper--sub__item">
+                              <div class="p-swiper--sub__slide">
+                                <p class="c-panel"><img src="./assets/img/square-gray.jpg" alt=""></p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="p-swiper--sub__page p-swiper--subOne__page"></div>
+                          <div class="p-swiper__prev p-swiper--sub__prev p-swiper--subOne__prev"></div>
+                          <div class="p-swiper__next p-swiper--sub__next p-swiper--subOne__next"></div>
+                        </div>
                         <div class="p-modal__txt">
-                          <div class="p-modal__txt__inner c-modal__txt">
-                            <p class="pc-modal__txt__ttl">
+                          <div class=" p-modal__txt__inner c-modal__txt">
+                            <p class="pc c-modal__txt__ttl">
                               ダミーダミーダミー
                             </p>
                             <p class="c-modal__txt__ts">
@@ -395,7 +500,6 @@ const img_path = assetsRelative() + 'img';
                               OTHER IMAGES
                             </p>
                           </div>
-                          <!-- サムネイル -->
                           <div class="swiper pc p-thumbnail p-thumbnail--one">
                             <div class="swiper-wrapper p-thumbnail__list">
                               <div class="swiper-slide p-thumbnail__item">
@@ -417,30 +521,213 @@ const img_path = assetsRelative() + 'img';
                     </div>
                     <div class="swiper-slide p-swiper--main__item">
                       <div class="p-swiper--main__slide">
-                        <p class="p-swiper--main__img"><img src="./assets/img/product-02.jpg" alt=""></p>
+                        <div class="swiper p-swiper--sub p-swiper--subTwo">
+                          <div class="swiper-wrapper p-swiper--sub__list">
+                            <div class="swiper-slide p-swiper--sub__item">
+                              <div class="p-swiper--sub__slide">
+                                <p class="c-panel"><img src="./assets/img/product-02.jpg" alt=""></p>
+                              </div>
+                            </div>
+                            <div class="swiper-slide p-swiper--sub__item">
+                              <div class="p-swiper--sub__slide">
+                                <p class="c-panel"><img src="./assets/img/square-gray.jpg" alt=""></p>
+                              </div>
+                            </div>
+                            <div class="swiper-slide p-swiper--sub__item">
+                              <div class="p-swiper--sub__slide">
+                                <p class="c-panel"><img src="./assets/img/product-02.jpg" alt=""></p>
+                              </div>
+                            </div>
+                            <div class="swiper-slide p-swiper--sub__item">
+                              <div class="p-swiper--sub__slide">
+                                <p class="c-panel"><img src="./assets/img/square-gray.jpg" alt=""></p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="p-swiper--sub__page p-swiper--subTwo__page"></div>
+                          <div class="p-swiper__prev p-swiper--sub__prev p-swiper--subTwo__prev"></div>
+                          <div class="p-swiper__next p-swiper--sub__next p-swiper--subTwo__next"></div>
+                        </div>
+                        <div class="p-modal__txt">
+                          <div class=" p-modal__txt__inner c-modal__txt">
+                            <p class="pc c-modal__txt__ttl">
+                              ダミーダミーダミー
+                            </p>
+                            <p class="c-modal__txt__ts">
+                              SPEC
+                            </p>
+                            <p class="c-modal__txt__tm">
+                              この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
+                            </p>
+                            <p class="c-modal__txt">
+                              この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するた
+                            </p>
+                            <p class="pc c-modal__txt__oi">
+                              OTHER IMAGES
+                            </p>
+                          </div>
+                          <div class="swiper pc p-thumbnail p-thumbnail--two">
+                            <div class="swiper-wrapper p-thumbnail__list">
+                              <div class="swiper-slide p-thumbnail__item">
+                                <img src="./assets/img/product-02.jpg" alt="" class="c-thumbnail">
+                              </div>
+                              <div class="swiper-slide p-thumbnail__item">
+                                <img src="./assets/img/square-gray.jpg" alt="" class="c-thumbnail">
+                              </div>
+                              <div class="swiper-slide p-thumbnail__item">
+                                <img src="./assets/img/product-02.jpg" alt="" class="c-thumbnail">
+                              </div>
+                              <div class="swiper-slide p-thumbnail__item">
+                                <img src="./assets/img/square-gray.jpg" alt="" class="c-thumbnail">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
                     <div class="swiper-slide p-swiper--main__item">
                       <div class="p-swiper--main__slide">
-                        <p class="p-swiper--main__img"><img src="./assets/img/product-03.jpg" alt=""></p>
+                        <div class="swiper p-swiper--sub p-swiper--subThree">
+                          <div class="swiper-wrapper p-swiper--sub__list">
+                            <div class="swiper-slide p-swiper--sub__item">
+                              <div class="p-swiper--sub__slide">
+                                <p class="c-panel"><img src="./assets/img/product-03.jpg" alt=""></p>
+                              </div>
+                            </div>
+                            <div class="swiper-slide p-swiper--sub__item">
+                              <div class="p-swiper--sub__slide">
+                                <p class="c-panel"><img src="./assets/img/square-gray.jpg" alt=""></p>
+                              </div>
+                            </div>
+                            <div class="swiper-slide p-swiper--sub__item">
+                              <div class="p-swiper--sub__slide">
+                                <p class="c-panel"><img src="./assets/img/product-03.jpg" alt=""></p>
+                              </div>
+                            </div>
+                            <div class="swiper-slide p-swiper--sub__item">
+                              <div class="p-swiper--sub__slide">
+                                <p class="c-panel"><img src="./assets/img/square-gray.jpg" alt=""></p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="p-swiper--sub__page p-swiper--subThree__page"></div>
+                          <div class="p-swiper__prev p-swiper--sub__prev p-swiper--subThree__prev"></div>
+                          <div class="p-swiper__next p-swiper--sub__next p-swiper--subThree__next"></div>
+                        </div>
+                        <div class="p-modal__txt">
+                          <div class=" p-modal__txt__inner c-modal__txt">
+                            <p class="pc c-modal__txt__ttl">
+                              ダミーダミーダミー
+                            </p>
+                            <p class="c-modal__txt__ts">
+                              SPEC
+                            </p>
+                            <p class="c-modal__txt__tm">
+                              この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
+                            </p>
+                            <p class="c-modal__txt">
+                              この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するた
+                            </p>
+                            <p class="pc c-modal__txt__oi">
+                              OTHER IMAGES
+                            </p>
+                          </div>
+                          <div class="swiper pc p-thumbnail p-thumbnail--three">
+                            <div class="swiper-wrapper p-thumbnail__list">
+                              <div class="swiper-slide p-thumbnail__item">
+                                <img src="./assets/img/product-03.jpg" alt="" class="c-thumbnail">
+                              </div>
+                              <div class="swiper-slide p-thumbnail__item">
+                                <img src="./assets/img/square-gray.jpg" alt="" class="c-thumbnail">
+                              </div>
+                              <div class="swiper-slide p-thumbnail__item">
+                                <img src="./assets/img/product-03.jpg" alt="" class="c-thumbnail">
+                              </div>
+                              <div class="swiper-slide p-thumbnail__item">
+                                <img src="./assets/img/square-gray.jpg" alt="" class="c-thumbnail">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
                     <div class="swiper-slide p-swiper--main__item">
                       <div class="p-swiper--main__slide">
-                        <p class="p-swiper--main__img"><img src="./assets/img/product-04.jpg" alt=""></p>
+                        <div class="swiper p-swiper--sub p-swiper--subFour">
+                          <div class="swiper-wrapper p-swiper--sub__list">
+                            <div class="swiper-slide p-swiper--sub__item">
+                              <div class="p-swiper--sub__slide">
+                                <p class="c-panel"><img src="./assets/img/product-04.jpg" alt=""></p>
+                              </div>
+                            </div>
+                            <div class="swiper-slide p-swiper--sub__item">
+                              <div class="p-swiper--sub__slide">
+                                <p class="c-panel"><img src="./assets/img/square-gray.jpg" alt=""></p>
+                              </div>
+                            </div>
+                            <div class="swiper-slide p-swiper--sub__item">
+                              <div class="p-swiper--sub__slide">
+                                <p class="c-panel"><img src="./assets/img/product-04.jpg" alt=""></p>
+                              </div>
+                            </div>
+                            <div class="swiper-slide p-swiper--sub__item">
+                              <div class="p-swiper--sub__slide">
+                                <p class="c-panel"><img src="./assets/img/square-gray.jpg" alt=""></p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="p-swiper--sub__page p-swiper--subFour__page"></div>
+                          <div class="p-swiper__prev p-swiper--sub__prev p-swiper--subFour__prev"></div>
+                          <div class="p-swiper__next p-swiper--sub__next p-swiper--subFour__next"></div>
+                        </div>
+                        <div class="p-modal__txt">
+                          <div class=" p-modal__txt__inner c-modal__txt">
+                            <p class="pc c-modal__txt__ttl">
+                              ダミーダミーダミー
+                            </p>
+                            <p class="c-modal__txt__ts">
+                              SPEC
+                            </p>
+                            <p class="c-modal__txt__tm">
+                              この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
+                            </p>
+                            <p class="c-modal__txt">
+                              この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するた
+                            </p>
+                            <p class="pc c-modal__txt__oi">
+                              OTHER IMAGES
+                            </p>
+                          </div>
+                          <div class="swiper pc p-thumbnail p-thumbnail--four">
+                            <div class="swiper-wrapper p-thumbnail__list">
+                              <div class="swiper-slide p-thumbnail__item">
+                                <img src="./assets/img/product-04.jpg" alt="" class="c-thumbnail">
+                              </div>
+                              <div class="swiper-slide p-thumbnail__item">
+                                <img src="./assets/img/square-gray.jpg" alt="" class="c-thumbnail">
+                              </div>
+                              <div class="swiper-slide p-thumbnail__item">
+                                <img src="./assets/img/product-04.jpg" alt="" class="c-thumbnail">
+                              </div>
+                              <div class="swiper-slide p-thumbnail__item">
+                                <img src="./assets/img/square-gray.jpg" alt="" class="c-thumbnail">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </div>
 
-                <div class="sp p-swiper--main__page"></div>
+                  </div>
+
+                </div>
+                <div class="p-swiper--main__page"></div>
                 <div class="p-swiper__prev p-swiper--main__prev"></div>
                 <div class="p-swiper__next p-swiper--main__next"></div>
               </div>
             </div>
 
           </div>
-
 
 
                 <!-- <div class="p-product__modal swiper-slide">
