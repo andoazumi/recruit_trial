@@ -127,24 +127,47 @@ import EVENTS from '~/constants/event-names';
   // //スライダーのことを書く
   // function settingSwiper(){
 
-  //   // ////swiperのベース
-  //   const swiperMain = new Swiper(".p-product__modal-swiper-main",{
-  //     pagination: {
-  //       el: '.p-product__modal-page-main',
-  //       // el: '.swiper-pagination-main',
-  //       type: 'fraction',
-  //     },
-  //     // navigation:{
-  //       //   prevEL:".p-product__modal-main-prev",
-  //       //   nextEl:".p-product__modal-main-next",
-  //       // },
-  //       navigation: {
-  //         nextEl: ".swiper-button-next",
-  //         prevEl: ".swiper-button-prev",
-  //       },
-  //     });
+    // ////swiperのベース
+    // const swiperMain = new Swiper(".p-product__modal-swiper-main",{
+    //   pagination: {
+    //     el: '.p-product__modal-page-main',
+    //     // el: '.swiper-pagination-main',
+    //     type: 'fraction',
+    //   },
+    //   // navigation:{
+    //     //   prevEL:".p-product__modal-main-prev",
+    //     //   nextEl:".p-product__modal-main-next",
+    //     // },
+    //     navigation: {
+    //       nextEl: ".swiper-button-next",
+    //       prevEl: ".swiper-button-prev",
+    //     },
+    //   });
 
   //     // //////swaiperの入れ子
+    // const sliderThumbnail = new Swiper(".slider-thumbnail", {
+    //   slidesPerView: 4, // サムネイルの枚数
+    // });
+
+    // const myModalSwiperSub = new Swiper(".p-swiper--subOne", {
+      //   spaceBetween: 100,
+      //   grabCursor: true,
+      //   nested: true,
+      //   pagination: {
+        //     el: '.p-swiper--subOne__page',
+        //     clickable: true,
+        //   },
+        //   navigation:{
+          //     nextEl:'.p-swiper--subOne__next',
+          //     prevEl:'.p-swiper--subOne__prev',
+          //   },
+          //   thumbs: {
+            //     swiper: swiperThumbnail,
+            //     // swiper: sliderThumbnail,
+            //   },
+            // });
+
+
   //     // const swiperSub = new Swiper(".p-product__modal-swiper-sub",{
   //       //   pagination: {
   //         //     el: '.swiper-pagination-sub',
@@ -239,51 +262,86 @@ import EVENTS from '~/constants/event-names';
     // swiperのベース
     const swiperMain =new Swiper(".p-swiper--main",{
       pagination:{
-        el:'.p-product__modal-page-main',
+        el:'.p-swiper--main__page',
         type:'fraction',
       },
       navigation:{
-        nextEl:'.p-product__modal-main-next',
-        prevEl:'.p-product__modal-main-prev',
+        nextEl:'.p-swiper--main__next',
+        prevEl:'.p-swiper--main__prev',
       }
     });
-
-    // const sliderThumbnail = new Swiper(".slider-thumbnail", {
-    //   slidesPerView: 4, // サムネイルの枚数
-    // });
-
-    const swiperThumbnail = new Swiper(".p-thumbnail--one",{
+            
+    const swiperThumbnailOne = new Swiper(".p-thumbnail--one",{
       slidesPerView: 4,
     });
 
-    const myModalSwiperSub = new Swiper(".p-swiper--subOne", {
-      spaceBetween: 100,
-      grabCursor: true,
-      nested: true,
-      pagination: {
-        el: '.p-swiper--subOne__page',
-        clickable: true,
+    const swiperSubOne = new Swiper(".p-swiper--subOne",{
+      pagination:{
+        el:'.p-swiper--subOne__page',
+        type:'fraction',
       },
       navigation:{
-        nextEl:'.p-swiper--subOne__next',
-        prevEl:'.p-swiper--subOne__prev',
+        nextEl:'.p-swiper--subOne__prev',
+        prevEl:'.p-swiper--subOne__next',
       },
       thumbs: {
-        swiper: swiperThumbnail,
-        // swiper: sliderThumbnail,
+            swiper: swiperThumbnailOne,
       },
+  });
+
+    const swiperThumbnailTwo = new Swiper(".p-thumbnail--two",{
+      slidesPerView: 4,
     });
 
-  //   const swiperSub = new Swiper({"",
-  //   pagination:{
-  //     el:'.p-product__modal-page-main',
-  //     type:'fraction',
-  //   },
-  //   navigation:{
-  //     nextEl:'.p-product__modal-main-next',
-  //     prevEl:'.p-product__modal-main-prev',
-  //   }
-  // });
+    const swiperSubTwo = new Swiper(".p-swiper--subTwo",{
+    pagination:{
+      el:'.p-swiper--subTwo__page',
+      type:'fraction',
+    },
+    navigation:{
+      nextEl:'.p-swiper--subTwo__prev',
+      prevEl:'.p-swiper--subTwo__next',
+    },
+    thumbs: {
+      swiper: swiperThumbnailTwo,
+    },
+  });
+
+    const swiperThumbnailThree = new Swiper(".p-thumbnail--three",{
+      slidesPerView: 4,
+    });
+
+    const swiperSubThree = new Swiper(".p-swiper--subThree",{
+    pagination:{
+      el:'.p-swiper--subThree__page',
+      type:'fraction',
+    },
+    navigation:{
+      nextEl:'.p-swiper--subThree__prev',
+      prevEl:'.p-swiper--subThree__next',
+    },
+    thumbs: {
+      swiper: swiperThumbnailThree,
+    },
+  });
+
+    const swiperThumbnailFour = new Swiper(".p-thumbnail--four",{
+      slidesPerView: 4,
+    });
+
+    const swiperSubFour = new Swiper(".p-swiper--subFour",{
+    pagination:{
+      el:'.p-swiper--subFour__page',
+      type:'fraction',
+    },
+    navigation:{
+      nextEl:'.p-swiper--subFour__prev',
+      prevEl:'.p-swiper--subFour__next',
+    },
+    thumbs: {
+      swiper: swiperThumbnailFour,
+    },
+  });
 
 
 
