@@ -1141,8 +1141,6 @@ img{
                 font-size: 1.1rem;
             }
         }
-        
-
     }
 
 
@@ -1866,7 +1864,7 @@ img{
             margin-right: 1rem;
         }
 
-        .p-product__modal-spec{
+        .c-modal__txt__ts{
             margin-top: 6.1rem;
         }
 
@@ -1887,31 +1885,6 @@ img{
             max-width: 100%;
             height: auto;
         }
-
-          .thumb-list {
-            max-width: 600px;
-            width: 100%;
-            margin: auto;
-            display: flex;
-            flex-flow: row wrap;
-            justify-content: space-between;
-          }
-          .thumb-item {
-            flex: 0 0 32%;//1行に表示するサムネイルの数を指定
-          }
-          .thumb-item img {
-            max-width: 100%;
-            height: auto;
-          }
-          .thumb-link {
-            display: block;
-          }
-          .swiper-arrow {
-            position: relative;
-            max-width: 700px;
-            width: 100%;
-            margin: auto;
-          }
 
 
     }
