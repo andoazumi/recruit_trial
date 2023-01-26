@@ -128,7 +128,7 @@ import EVENTS from '~/constants/event-names';
   // function settingSwiper(){
 
     // ////swiperのベース
-    // const swiperMain = new Swiper(".p-product__modal-swiper-main",{
+    // const swiperMain = new Swiper(".p-swiper--main",{
     //   pagination: {
     //     el: '.p-product__modal-page-main',
     //     // el: '.swiper-pagination-main',
@@ -230,7 +230,7 @@ import EVENTS from '~/constants/event-names';
     const overlay = document.querySelector('.c-overay');
 
     // モーダルの閉じるボタンを取得
-    const closeBtn = document.querySelector('.c-cb');
+    const closeBtn = document.querySelector('.p-cb');
 
     // product-content内をクリックしたら、is-showをつける
     openModal.forEach(function(elm){
@@ -262,12 +262,12 @@ import EVENTS from '~/constants/event-names';
     // swiperのベース
     const swiperMain =new Swiper(".p-swiper--main",{
       pagination:{
-        el:'.p-swiper--main__page',
+        el:".p-swiper--main__page",
         type:'fraction',
       },
       navigation:{
-        nextEl:'.p-swiper--main__next',
-        prevEl:'.p-swiper--main__prev',
+        nextEl:".p-swiper--main__next",
+        prevEl:".p-swiper--main__prev",
       }
     });
             
@@ -277,12 +277,12 @@ import EVENTS from '~/constants/event-names';
 
     const swiperSubOne = new Swiper(".p-swiper--subOne",{
       pagination:{
-        el:'.p-swiper--subOne__page',
+        el:".p-swiper--subOne__page",
         type:'fraction',
       },
       navigation:{
-        nextEl:'.p-swiper--subOne__prev',
-        prevEl:'.p-swiper--subOne__next',
+        nextEl:".p-swiper--subOne__next",
+        prevEl:".p-swiper--subOne__prev",
       },
       thumbs: {
             swiper: swiperThumbnailOne,
@@ -295,12 +295,12 @@ import EVENTS from '~/constants/event-names';
 
     const swiperSubTwo = new Swiper(".p-swiper--subTwo",{
     pagination:{
-      el:'.p-swiper--subTwo__page',
+      el:".p-swiper--subTwo__page",
       type:'fraction',
     },
     navigation:{
-      nextEl:'.p-swiper--subTwo__prev',
-      prevEl:'.p-swiper--subTwo__next',
+      nextEl:".p-swiper--subTwo__next",
+      prevEl:".p-swiper--subTwo__prev",
     },
     thumbs: {
       swiper: swiperThumbnailTwo,
@@ -313,12 +313,12 @@ import EVENTS from '~/constants/event-names';
 
     const swiperSubThree = new Swiper(".p-swiper--subThree",{
     pagination:{
-      el:'.p-swiper--subThree__page',
+      el:".p-swiper--subThree__page",
       type:'fraction',
     },
     navigation:{
-      nextEl:'.p-swiper--subThree__prev',
-      prevEl:'.p-swiper--subThree__next',
+      nextEl:".p-swiper--subThree__next",
+      prevEl:".p-swiper--subThree__prev",
     },
     thumbs: {
       swiper: swiperThumbnailThree,
@@ -331,12 +331,12 @@ import EVENTS from '~/constants/event-names';
 
     const swiperSubFour = new Swiper(".p-swiper--subFour",{
     pagination:{
-      el:'.p-swiper--subFour__page',
+      el:".p-swiper--subFour__page",
       type:'fraction',
     },
     navigation:{
-      nextEl:'.p-swiper--subFour__prev',
-      prevEl:'.p-swiper--subFour__next',
+      nextEl:".p-swiper--subFour__next",
+      prevEl:".p-swiper--subFour__prev",
     },
     thumbs: {
       swiper: swiperThumbnailFour,
