@@ -273,7 +273,7 @@ import EVENTS from '~/constants/event-names';
             
     const swiperThumbnailOne = new Swiper(".p-thumbnail--one",{
       slidesPerView: 4,
-      // spaceBetween: 10,
+      spaceBetween: 10,
 
     });
 
@@ -293,6 +293,7 @@ import EVENTS from '~/constants/event-names';
 
     const swiperThumbnailTwo = new Swiper(".p-thumbnail--two",{
       slidesPerView: 4,
+      spaceBetween: 10,
     });
 
     const swiperSubTwo = new Swiper(".p-swiper--subTwo",{
@@ -311,6 +312,7 @@ import EVENTS from '~/constants/event-names';
 
     const swiperThumbnailThree = new Swiper(".p-thumbnail--three",{
       slidesPerView: 4,
+      spaceBetween: 10,
     });
 
     const swiperSubThree = new Swiper(".p-swiper--subThree",{
@@ -329,6 +331,7 @@ import EVENTS from '~/constants/event-names';
 
     const swiperThumbnailFour = new Swiper(".p-thumbnail--four",{
       slidesPerView: 4,
+      spaceBetween: 10,
     });
 
     const swiperSubFour = new Swiper(".p-swiper--subFour",{
@@ -357,7 +360,7 @@ import EVENTS from '~/constants/event-names';
       openModalBtn.addEventListener("click",() => {
         const modalIndex = openModalBtn.dataset.slideIndex;
           // data-slide-indexに設定したスライド番号を取得
-        swiperMain.slideTo(modalIndex);
+        swiperMain.slideToClosest(modalIndex);
           // 該当する番号へスライドさせる 
       });
     });        
