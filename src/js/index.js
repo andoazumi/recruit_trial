@@ -273,6 +273,8 @@ import EVENTS from '~/constants/event-names';
             
     const swiperThumbnailOne = new Swiper(".p-thumbnail--one",{
       slidesPerView: 4,
+      // spaceBetween: 10,
+
     });
 
     const swiperSubOne = new Swiper(".p-swiper--subOne",{
