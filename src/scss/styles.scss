@@ -611,13 +611,26 @@ img{
         position: relative;
     }
 
-    .c-cb{
+    .p-cb{
         color: var(--c-white);
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         margin-left: auto;
-        text-align: right;
+        // text-align: right;
+    }
+
+    .c-btn--line{
+        height: 0.1rem;
+        background: var(--c-white);
+        &:first-child{
+            transform:translateY(50%) rotate(-45deg);
+        }
+        
+        &:last-child{
+            transform:translateY(50%) rotate(45deg);
+        }
     }
 
     .p-modal__txt{
@@ -1095,10 +1108,18 @@ img{
             }
         }
 
-        .c-cb{
+        .p-cb{
             font-size: 1.8rem;
             width: 6rem;
             height: 6rem;
+        }
+
+        .c-btn--line{
+            width: 2.4rem;
+        }
+
+        .p-swiper--main__item{
+            background: var(--c-white);
         }
 
         .p-modal__txt{
@@ -1114,31 +1135,59 @@ img{
         }
 
         .c-modal__txt{
-            margin-top: 3rem;
+            margin-top: 4.5rem;
             line-height: 24 / 14;
         }
 
         .swiper-pagination-fraction{
             font-size: 1.1rem;
             position: absolute;
+        }
+        
+        .p-swiper--main__page{
             bottom: - 4.5rem;
+        }
+
+        .p-swiper--sub__page{
+            bottom: 25.4rem;
+            color: var(--c-black-03);
         }
 
         .p-swiper__next{
             top: auto;
-            bottom: - 6rem;
             right: calc(139vw * 100 / 375);
             &::after{
                 font-size: 1.1rem;
             }
         }
         
+        .p-swiper--main__next{
+            bottom: - 6rem;
+        }
+
+        .p-swiper--sub__next{
+            bottom: 24rem;
+            &::after{
+                color: var(--c-black-03);
+            }
+        }
+        
         .p-swiper__prev{
             top: auto;       
-            bottom: - 6rem;
             left: calc(139vw * 100 / 375);
             &::after{
                 font-size: 1.1rem;
+            }
+        }
+        
+        .p-swiper--main__prev{
+            bottom: - 6rem;
+        }
+
+        .p-swiper--sub__prev{
+            bottom: 24rem;
+            &::after{
+                color: var(--c-black-03);
             }
         }
     }
@@ -1857,11 +1906,15 @@ img{
             margin-top: 5.2rem;
         }
 
-        .c-cb{
+        .p-cb{
             font-size: 3.5rem;
             width: 10rem;
             height: 10rem;
             margin-right: 1rem;
+        }
+
+        .c-btn--line{
+            width: 3.4rem;
         }
 
         .c-modal__txt__ts{
