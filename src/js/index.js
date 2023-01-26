@@ -360,7 +360,7 @@ import EVENTS from '~/constants/event-names';
       openModalBtn.addEventListener("click",() => {
         const modalIndex = openModalBtn.dataset.slideIndex;
           // data-slide-indexに設定したスライド番号を取得
-        swiperMain.slideToClosest(modalIndex);
+        swiperMain.slideTo(modalIndex,0);
           // 該当する番号へスライドさせる 
       });
     });        
