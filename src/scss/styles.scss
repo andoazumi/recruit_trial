@@ -1965,9 +1965,14 @@ img{
             width: calc(100% / 4 - (10 * 3 / 4 + 15 * 2));
         }
 
+        .p-swiper--container{
+            position: relative;
+        }
+
         .p-swiper--sub__page{
             bottom: 4.3rem;
-            left: unquote('min(calc(552vw * 100 / 1440),55.2rem)');
+            right: auto;
+            left: unquote('min(calc(348vw * 100 / 1440),34.8rem)');
         }
         
         .p-swiper--main__next{
@@ -1980,7 +1985,7 @@ img{
         .p-swiper--sub__next{
             top: auto;
             width: auto;
-            right: unquote('min(calc(120vw * 100 / 1440),12rem)');
+            right: 0rem;
             bottom: 2.8rem;
             &::after{
                 font-size: 1rem;
@@ -1997,8 +2002,8 @@ img{
         
         .p-swiper--sub__prev{
             top: auto;
-            width: auto;
-            left: unquote('min(calc(1223vw * 100 / 1440),122.3rem)');
+            right: unquote('min(calc(85vw * 100 / 1440),85rem)');
+            left: auto;
             bottom: 2.8rem;
             &::after{
                 font-size: 1rem;
