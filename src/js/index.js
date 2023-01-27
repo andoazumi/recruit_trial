@@ -235,7 +235,7 @@ import EVENTS from '~/constants/event-names';
     // product-content内をクリックしたら、is-showをつける
     openModal.forEach(function(elm){
         // forEachは与えられた関数を配列の各要素に対して一つずつ実行する。
-        // console.log(elm);
+        console.log(elm);
       elm.addEventListener('click',function(){
         // .product-contentをクリックした時に実行する
         modalArea.classList.add('is-show');
@@ -271,83 +271,130 @@ import EVENTS from '~/constants/event-names';
       }
     });
             
-    const swiperThumbnailOne = new Swiper(".p-thumbnail--one",{
+  //   const swiperThumbnailOne = new Swiper(".p-thumbnail--one",{
+  //     slidesPerView: 4,
+  //     spaceBetween: 10,
+
+  //   });
+
+  //   const swiperSubOne = new Swiper(".p-swiper--subOne",{
+  //     pagination:{
+  //       el:".p-swiper--subOne__page",
+  //       type:'fraction',
+  //     },
+  //     navigation:{
+  //       nextEl:".p-swiper--subOne__next",
+  //       prevEl:".p-swiper--subOne__prev",
+  //     },
+  //     thumbs: {
+  //           swiper: swiperThumbnailOne,
+  //     },
+  // });
+
+  //   const swiperThumbnailTwo = new Swiper(".p-thumbnail--two",{
+  //     slidesPerView: 4,
+  //     spaceBetween: 10,
+  //   });
+
+  //   const swiperSubTwo = new Swiper(".p-swiper--subTwo",{
+  //   pagination:{
+  //     el:".p-swiper--subTwo__page",
+  //     type:'fraction',
+  //   },
+  //   navigation:{
+  //     nextEl:".p-swiper--subTwo__next",
+  //     prevEl:".p-swiper--subTwo__prev",
+  //   },
+  //   thumbs: {
+  //     swiper: swiperThumbnailTwo,
+  //   },
+  // });
+
+  //   const swiperThumbnailThree = new Swiper(".p-thumbnail--three",{
+  //     slidesPerView: 4,
+  //     spaceBetween: 10,
+  //   });
+
+  //   const swiperSubThree = new Swiper(".p-swiper--subThree",{
+  //   pagination:{
+  //     el:".p-swiper--subThree__page",
+  //     type:'fraction',
+  //   },
+  //   navigation:{
+  //     nextEl:".p-swiper--subThree__next",
+  //     prevEl:".p-swiper--subThree__prev",
+  //   },
+  //   thumbs: {
+  //     swiper: swiperThumbnailThree,
+  //   },
+  // });
+
+  //   const swiperThumbnailFour = new Swiper(".p-thumbnail--four",{
+  //     slidesPerView: 4,
+  //     spaceBetween: 10,
+  //   });
+
+  //   const swiperSubFour = new Swiper(".p-swiper--subFour",{
+  //   pagination:{
+  //     el:".p-swiper--subFour__page",
+  //     type:'fraction',
+  //   },
+  //   navigation:{
+  //     nextEl:".p-swiper--subFour__next",
+  //     prevEl:".p-swiper--subFour__prev",
+  //   },
+  //   thumbs: {
+  //     swiper: swiperThumbnailFour,
+  //   },
+  // });
+
+  // パネル要素を取得する
+  const modalPanel = document.querySelectorAll('.p-swiper--container');
+  console.log(modalPanel);
+
+
+  // それぞれのパネル要素内でサブスライダーとサムネイルを生成する
+  modalPanel.forEach(function(modalPanels){
+    console.log(modalPanels);
+
+    // const thumbnail = modalPanels.querySelector('.p-thumbnail');
+    // console.log(thumbnail);
+
+    const swiperThumbnail = new Swiper(".p-thumbnail",{
       slidesPerView: 4,
       spaceBetween: 10,
-
     });
 
-    const swiperSubOne = new Swiper(".p-swiper--subOne",{
+    const swiperSub = new Swiper(".p-swiper--sub",{
       pagination:{
-        el:".p-swiper--subOne__page",
+        el:".p-swiper--sub__page",
         type:'fraction',
       },
       navigation:{
-        nextEl:".p-swiper--subOne__next",
-        prevEl:".p-swiper--subOne__prev",
+        nextEl:".p-swiper--sub__next",
+        prevEl:".p-swiper--sub__prev",
       },
-      thumbs: {
-            swiper: swiperThumbnailOne,
-      },
-  });
 
-    const swiperThumbnailTwo = new Swiper(".p-thumbnail--two",{
-      slidesPerView: 4,
-      spaceBetween: 10,
+      // thumbs: {
+      //   swiper: swiperThumbnail,
+      // },
     });
-
-    const swiperSubTwo = new Swiper(".p-swiper--subTwo",{
-    pagination:{
-      el:".p-swiper--subTwo__page",
-      type:'fraction',
-    },
-    navigation:{
-      nextEl:".p-swiper--subTwo__next",
-      prevEl:".p-swiper--subTwo__prev",
-    },
-    thumbs: {
-      swiper: swiperThumbnailTwo,
-    },
+    
   });
+      // 
+    //   openModal.forEach(function(elm){
+    //     // forEachは与えられた関数を配列の各要素に対して一つずつ実行する。
+    //     console.log(elm);
+    //   elm.addEventListener('click',function(){
+    //     // .product-contentをクリックした時に実行する
+    //     modalArea.classList.add('is-show');
+    //   });
+    // });
 
-    const swiperThumbnailThree = new Swiper(".p-thumbnail--three",{
-      slidesPerView: 4,
-      spaceBetween: 10,
-    });
 
-    const swiperSubThree = new Swiper(".p-swiper--subThree",{
-    pagination:{
-      el:".p-swiper--subThree__page",
-      type:'fraction',
-    },
-    navigation:{
-      nextEl:".p-swiper--subThree__next",
-      prevEl:".p-swiper--subThree__prev",
-    },
-    thumbs: {
-      swiper: swiperThumbnailThree,
-    },
-  });
+  // 
 
-    const swiperThumbnailFour = new Swiper(".p-thumbnail--four",{
-      slidesPerView: 4,
-      spaceBetween: 10,
-    });
-
-    const swiperSubFour = new Swiper(".p-swiper--subFour",{
-    pagination:{
-      el:".p-swiper--subFour__page",
-      type:'fraction',
-    },
-    navigation:{
-      nextEl:".p-swiper--subFour__next",
-      prevEl:".p-swiper--subFour__prev",
-    },
-    thumbs: {
-      swiper: swiperThumbnailFour,
-    },
-  });
-
+  // 
 
 
     // クリックした箇所を表示させる
