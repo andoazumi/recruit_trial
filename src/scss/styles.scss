@@ -1931,6 +1931,10 @@ img{
             // flex: 1;
 
         }
+
+        .p-modal--txt{
+            position: relative;
+        }
         
         // // .p-modal--container{
         //     // }
@@ -2020,15 +2024,20 @@ img{
         .p-thumbnail{
             position: absolute;
             // bottom: -7%;
-            bottom: unquote('min(calc(40vw * 100 / 1440),4rem)');
+            bottom: unquote('min(calc(40vw * -100 / 1440), -4rem)');
+            // bottom: unquote('min(calc(40vw * 100 / 1440),4rem)');
             // width: unquote('min(calc(380vw * 100 / 1440),38rem)');
-            margin-left:  unquote('min(calc(15vw * 100 / 1440),1.5rem)');
+            // margin-left:  unquote('min(calc(15vw * 100 / 1440),1.5rem)');
+            width: 100%;
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+            box-sizing: border-box;
         }
         
         .p-thumbnail__list{
             width: unquote('min(calc(350vw * 100 / 1440),35rem)');
-            margin-left: auto;
-            margin-right: auto;
+            // margin-left: auto;
+            // margin-right: auto;
         }
 
         .p-swiper--container{
@@ -2036,7 +2045,7 @@ img{
         }
 
         .p-swiper--sub__page{
-            bottom: 4.3rem;
+            bottom: -3.7rem;
             right: auto;
             left: unquote('min(calc(348vw * 100 / 1440),34.8rem)');
         }
@@ -2060,7 +2069,7 @@ img{
             top: auto;
             width: auto;
             right: 0rem;
-            bottom: 2.8rem;
+            bottom: -5.2rem;
             &::after{
                 font-size: 1rem;
             }
@@ -2086,7 +2095,7 @@ img{
             top: auto;
             right: unquote('min(calc(90vw * 100 / 1440),9rem)');
             left: auto;
-            bottom: 2.8rem;
+            bottom: - 5.2rem;
             &::after{
                 font-size: 1rem;
             }
