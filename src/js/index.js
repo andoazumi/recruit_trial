@@ -348,8 +348,10 @@ import EVENTS from '~/constants/event-names';
   //   },
   // });
 
+  // console.log(swiperSubFour);
+
   // パネル要素を取得する
-  const modalPanel = document.querySelectorAll('.p-swiper--container');
+  const modalPanel = document.querySelectorAll('.p-swiper--main__slide');
   console.log(modalPanel);
 
 
@@ -357,28 +359,35 @@ import EVENTS from '~/constants/event-names';
   modalPanel.forEach(function(modalPanels){
     console.log(modalPanels);
 
-    // const thumbnail = modalPanels.querySelector('.p-thumbnail');
-    // console.log(thumbnail);
-
-    const swiperThumbnail = new Swiper(".p-thumbnail",{
+    const thumbnail = modalPanels.querySelector('.p-thumbnail');
+    console.log(thumbnail);
+    
+    const swiperThumbnail = new Swiper(thumbnail,{
       slidesPerView: 4,
       spaceBetween: 10,
     });
 
-    const swiperSub = new Swiper(".p-swiper--sub",{
+    const  swiper = modalPanels.querySelector('.p-swiper--sub');
+    const paginationSub = modalPanels.querySelector('.p-swiper--sub__page');
+    const navigationNext = modalPanels.querySelector('.p-swiper--sub__next');
+    const navigationPrev = modalPanels.querySelector('.p-swiper--sub__prev');
+
+    const swiperSub = new Swiper(swiper,{
       pagination:{
-        el:".p-swiper--sub__page",
+        el:paginationSub,
         type:'fraction',
       },
       navigation:{
-        nextEl:".p-swiper--sub__next",
-        prevEl:".p-swiper--sub__prev",
+        nextEl:navigationNext,
+        prevEl:navigationPrev,
       },
-
-      // thumbs: {
-      //   swiper: swiperThumbnail,
-      // },
+      thumbs: {
+        swiper: swiperThumbnail,
+      },
     });
+
+    console.log(swiperThumbnail);
+    console.log(swiperSub);
     
   });
       // 
