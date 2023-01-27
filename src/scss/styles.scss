@@ -1880,10 +1880,26 @@ img{
             margin-left: 0;
             margin-right: 0;
         }
+        
+        .p-swiper--main{
+            height: 100%;
+        }
 
         // .p-product__modal{
    
         // }
+
+        .p-modal--inner{
+            width: unquote('min(calc(1200vw * 100 / 1440),120rem)');
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .p-swiper--main__list{
+            padding-top: 8rem;
+            padding-bottom: 8rem;
+        }
+
 
         .p-swiper--main__slide{
             height: 100%;
@@ -1892,28 +1908,51 @@ img{
             gap: 2rem;
             justify-content: center;
             // // align-items: center;
-            width: unquote('min(calc(1200vw * 100 / 1440),120rem)');
+            // width: unquote('min(calc(1200vw * 100 / 1440),120rem)');
             margin-left: auto;
             margin-right: auto;
         }
 
+        // .p-swiper--sub{
+        //     width: unquote('min(calc(800vw * 100 / 1440),80rem)');
+        // width: 100%;
+        // width: 80rem;
+        // }
+
         .p-swiper--sub{
-            width: unquote('min(calc(800vw * 100 / 1440),80rem)');
-            // max-width: 80rem;
+            height: 100%;
         }
         
-        // .p-modal--container{
-            // }
+        .p-swiper--container{
+            width: unquote('min(calc(800vw * 100 / 1440),80rem)');
             
-            .p-modal--txt{
-                // width: unquote('min(calc(380vw * 100 / 1440),38rem)');
-                flex: 1;
-                width: 38rem;
-            // .c-modal--txt{
-                //    width: unquote('min(calc(300vw * 100 / 1440),30rem)');
-                // }
-                position: relative;
-                margin-bottom: 3.5%;
+            // width: 100%;
+            // max-width: 80rem;
+            // flex: 1;
+
+        }
+        
+        // // .p-modal--container{
+        //     // }
+            
+        //     .p-modal--txt{
+        //         // width: unquote('min(calc(380vw * 100 / 1440),38rem)');
+        //         width: 38rem;
+        //     // .c-modal--txt{
+        //         //    width: unquote('min(calc(300vw * 100 / 1440),30rem)');
+        //         // }
+        //         position: relative;
+        //         margin-bottom: 3.5%;
+        // }
+
+        // .p-modal--txt__inner{
+        //     width: 38rem;
+        // }
+        .p-modal--txt__inner{
+            padding-top: 5.2rem;
+            padding-left: 4rem;
+            padding-right: 4rem;
+            padding-bottom: 6.2rem;
         }
 
         .p-swiper--main__list{
@@ -1930,7 +1969,7 @@ img{
         }
 
         .p-swiper{
-            height: calc(100vh - 10rem);
+            // height: calc(100vh - 10rem);
             display: flex;
             align-items: center;
         }
@@ -1946,12 +1985,6 @@ img{
             width: 3.4rem;
         }
 
-        .p-modal--txt__inner{
-            padding-top: 5.2rem;
-            padding-left: 4rem;
-            padding-right: 4rem;
-            padding-bottom: 6.2rem;
-        }
 
         .c-modal--txt__ts{
             margin-top: 6.1rem;
@@ -1974,14 +2007,20 @@ img{
             margin-top: 10.6rem;
         }
 
+        .p-swiper--sub__slide{
+            height: 100%;
+        }
+
         .c-panel{
             max-width: 100%;
-            height: auto;
+            height: 100%;
+            object-fit: cover;
         }
 
         .p-thumbnail{
             position: absolute;
-            bottom: -7%;
+            // bottom: -7%;
+            bottom: unquote('min(calc(40vw * 100 / 1440),4rem)');
             // width: unquote('min(calc(380vw * 100 / 1440),38rem)');
             margin-left:  unquote('min(calc(15vw * 100 / 1440),1.5rem)');
         }
@@ -2130,7 +2169,7 @@ img{
 }
 
 //＝＝＝＝＝＝＝＝ tab ＝＝＝＝＝＝＝＝
-// @media screen and (min-width:768px) and  (max-width:1023px){
+@media screen and (min-width:768px) and  (max-width:1023px){
 //     //＝＝＝ header ＝＝＝
 //     .header.on {
 //         .menu-body{
@@ -2278,4 +2317,5 @@ img{
 //         }
 //     }
 
-// }
+
+}
