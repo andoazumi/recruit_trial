@@ -1,0 +1,91 @@
+.p-carousel {
+  $this: &;
+
+  &__container {
+    overflow-y: auto;
+
+    @include pc {
+      max-height: calc(100vh - 30rem);
+    }
+
+    @include sp {
+      max-height: calc(100vh - 12rem);
+    }
+  }
+
+  &__main {
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__contents {
+    display: flex;
+  }
+
+  &__item {
+    flex-shrink: 0;
+
+    @include pc {
+      width: 100%;
+    }
+  }
+
+  &__nav {
+    color: #fff;
+
+    @include sp {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 10rem;
+      margin: 1rem auto 0;
+    }
+
+    .c-pagination {
+      font-size: 1.1rem;
+
+      @include pc {
+        display: none;
+      }
+    }
+  }
+
+  &__arrow {
+    @include pc {
+      position: absolute;
+      top: 50%;
+      font-size: 1.4rem;
+      color: #fff;
+    }
+
+    @include sp {
+      font-size: 1rem;
+      transform: scale(0.5);
+    }
+
+    &[data-nav-prev] {
+      @include pc {
+        left: -4rem;
+        transform: translate(-100%, -50%);
+      }
+
+      @include tab {
+        left: -2rem;
+      }
+    }
+    &[data-nav-next] {
+      @include pc {
+        right: -4rem;
+        transform: translate(100%, -50%);
+      }
+
+      @include tab {
+        right: -2rem;
+      }
+
+      .c-arrow {
+        transform: scale(-1, 1);
+      }
+    }
+  }
+}

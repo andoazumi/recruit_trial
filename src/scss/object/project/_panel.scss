@@ -1,0 +1,191 @@
+.p-panel {
+  $this: &;
+
+  @include pc {
+    height: 100%;
+  }
+
+  &__container {
+    display: flex;
+
+    @include pc {
+      position: relative;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      height: inherit;
+    }
+
+    @include sp {
+      flex-direction: column-reverse;
+      width: 100%;
+      background: #fff;
+    }
+  }
+
+  &__body {
+    color: #444;
+
+    @include pc {
+      position: relative;
+      flex: 1;
+    }
+
+    @include tab {
+      flex: unset;
+      width: 28rem;
+    }
+
+    @include sp {
+      width: 100%;
+    }
+  }
+
+  &__images {
+    @include pc {
+      width: unquote('min(calc(800vw * 100 / 1440), 80rem)');
+      margin-left: 2rem;
+    }
+
+    @include tab {
+      width: calc(100% - 30rem);
+    }
+
+    @include sp {
+      width: 100%;
+    }
+
+    .c-images {
+      @include pc {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  &__box {
+    @include pc {
+      height: 100%;
+      padding: 4rem 4rem calc(185vw * 100 / 1440);
+      background: #fff;
+    }
+
+    @include sp {
+      padding: 2rem 2rem 2.5rem;
+    }
+  }
+
+  &__nav {
+    @include pc {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 0 1.5rem;
+    }
+
+    @include sp {
+      display: none;
+    }
+  }
+
+  &__ttl {
+    @include pc {
+      font-size: 1.8rem;
+    }
+
+    @include sp {
+      display: none;
+    }
+  }
+
+  &__spec {
+    @include pc {
+      margin-top: 6rem;
+    }
+  }
+
+  &__desc {
+    @include pc {
+      margin-top: 3.5rem;
+    }
+
+    @include sp {
+      margin-top: 3rem;
+    }
+
+    #{$this}__spec & {
+      @include pc {
+        margin-top: 2rem;
+      }
+
+      @include sp {
+        margin-top: 1rem;
+      }
+    }
+  }
+
+  &__hdg {
+    font-family: lato;
+    font-size: 1.1rem;
+
+    #{$this}__nav & {
+      padding-left: 2.5rem;
+    }
+  }
+
+  &__txt {
+    font-size: 1.4rem;
+
+    @include pc {
+      line-height: 2;
+    }
+
+    @include sp {
+      line-height: (24 / 14);
+    }
+
+    &--sm {
+      font-size: 1.2rem;
+      line-height: 2;
+    }
+  }
+
+  &__thumb {
+    @include pc {
+      margin-top: 2.5rem;
+    }
+  }
+
+  &__ctrl {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 10rem;
+
+    @include pc {
+      position: absolute;
+      right: 0;
+      bottom: -2.5rem;
+      color: #fff;
+    }
+
+    @include sp {
+      margin: 1rem auto 0;
+    }
+
+    .c-pagination {
+      font-size: 1.1rem;
+    }
+  }
+
+  &__arrow {
+    font-size: 1rem;
+    transform: scale(0.5);
+
+    &[data-image-next] {
+      .c-arrow {
+        transform: scale(-1, 1);
+      }
+    }
+  }
+}

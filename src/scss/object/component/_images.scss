@@ -1,0 +1,31 @@
+.c-images {
+  $this: &;
+
+  position: relative;
+  overflow: hidden;
+
+  &__container {
+    display: flex;
+    height: inherit;
+  }
+
+  &__item {
+    flex-shrink: 0;
+    width: 100%;
+    height: inherit;
+
+    img {
+      display: block;
+      width: 100%;
+
+      @include pc {
+        height: 100%;
+        object-fit: cover;
+      }
+
+      @include sp {
+        height: auto;
+      }
+    }
+  }
+}

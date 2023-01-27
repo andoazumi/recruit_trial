@@ -1,6 +1,9 @@
 import { debounce } from 'lodash-es';
 import Stats from 'stats-js';
 
+import Swiper, { Thumbs, Navigation, Pagination } from 'swiper';
+import gsap from 'gsap';
+
 import EVENTS from '~/constants/event-names';
 
 (function () {
@@ -21,369 +24,185 @@ import EVENTS from '~/constants/event-names';
   };
 
   // メニューボタンのことを書く
-  function menuBtn(){
-
+  function menuBtn() {
     // 鈴木さんが作ってくださった、js記述のメニューボタン
-    let getMenuBtn = document.querySelector('.menu-btn');
+    const getMenuBtn = document.querySelector('.menu-btn');
     const headerElm = document.querySelector('header');
     // 取得したheader要素を代入
-    
+
     const htmlEl = document.documentElement;
     // 取得したドキュメントのルート(最上位)の要素、すなわちすなわちhtml要素を代入
-    
-    let bbb = $(".menu-btn");
+
+    const bbb = $('.menu-btn');
     getMenuBtn.addEventListener('click', function (event) {
       event.preventDefault(); // aタグなどのhtmlのデフォルトの動作をストップ
       console.log('Click');
       // headerElm.classList.toggle('on');
       // headerElm.classList.add('on'); // クラスをつける
       // headerElm.classList.remove('on');  // クラスをとる
-      
+
       // if文のもの作成
       // if(headerElm.classList.contains('on')){
-        //   // header要素に「on」というクラスがあるとき
-        
-        //   headerElm.classList.remove('on');
-        //   // header要素から「on」というクラスを削除
-        
-        //   htmlEl.classList.remove('scroll-stop');
-        //   // html要素から「scroll-stop」というクラスを削除
-        
-        // }else{
-          //   // header要素に「on」というクラスがないとき
-          
-          //   headerElm.classList.add('on');
-          //   // header要素から「on」というクラスをつける
-          
-          //   htmlEl.classList.add('scroll-stop');
-          //    // html要素から「scroll-stop」というクラスをつける
-          // }
-          
-          if(htmlEl.classList.contains('on')){
-            // html要素に「on」というクラスがあるとき
-            
-            htmlEl.classList.remove('on');
-            // html要素から「on」というクラスを削除
-            
-            // htmlEl.classList.remove('scroll-stop');
-            // // html要素から「scroll-stop」というクラスを削除
-            
-          }else{
-            // html要素に「on」というクラスがないとき
-            
-            htmlEl.classList.add('on');
-            // html要素から「on」というクラスをつける
-            
-            // htmlEl.classList.add('scroll-stop');
-            //  // html要素から「scroll-stop」というクラスをつける
-          }
-          
-        })
-   }
-        
-  // // モーダルのことを書く
-  // function settingModal(){
-  //   console.log('wa');
-  //   const openModal = document.querySelectorAll('.product-content');
-  //   // クリックしたらモーダルが展開する箇所すべて
-  //   // console.log(openModal);
-  //   // 配列で四つ取れている
+      //   // header要素に「on」というクラスがあるとき
 
-  //   const modalArea = document.querySelector('.p-product__modal-area');
-  //   // モーダルのエリアを取得
+      //   headerElm.classList.remove('on');
+      //   // header要素から「on」というクラスを削除
 
-  //   const overlay = document.querySelector('.p-product__modal-bg');
-  //   // モーダルの黒い背景の箇所を取得
+      //   htmlEl.classList.remove('scroll-stop');
+      //   // html要素から「scroll-stop」というクラスを削除
 
-  //   const closeBtn = document.querySelector('.p-product__modal-cb')
-  //   // モーダルの閉じるボタンを取得
+      // }else{
+      //   // header要素に「on」というクラスがないとき
 
-  //   // product-content内をクリックしたら、is-showをつける
-  //   openModal.forEach(function(elm){
-  //     // forEachは与えられた関数を配列の各要素に対して一つずつ実行する。
-  //     // console.log(elm);
-  //     elm.addEventListener('click',function(){
-  //       modalArea.classList.add('is-show');
-  //     });
-  //   });
-  //   // openModal.addEventListener('click',function(){
-  //   //   modalArea.classList.toggle('is-show');
-  //   // },false);
-  //   // 「openModal.addEventListener is not a function」て出る
+      //   headerElm.classList.add('on');
+      //   // header要素から「on」というクラスをつける
 
-  //   // モーダルの黒い背景の箇所をクリックしたら、is-showを外す
-  //   overlay.addEventListener('click',function(){
-  //     // modalArea.classList.toggle('is-show');
-  //     // ↑参考にしたサイト元々にあったやつ
-  //     modalArea.classList.remove('is-show');
-  //   },false);
+      //   htmlEl.classList.add('scroll-stop');
+      //    // html要素から「scroll-stop」というクラスをつける
+      // }
 
-  //   // モーダルの閉じるボタンを押した時に、is-showを外す
-  //   closeBtn.addEventListener('click',function(){
-  //     modalArea.classList.remove('is-show');
-  //   },false);
-  // }
+      if (htmlEl.classList.contains('on')) {
+        // html要素に「on」というクラスがあるとき
 
-  // //スライダーのことを書く
-  // function settingSwiper(){
+        htmlEl.classList.remove('on');
+        // html要素から「on」というクラスを削除
 
-    // ////swiperのベース
-    // const swiperMain = new Swiper(".p-swiper--main",{
-    //   pagination: {
-    //     el: '.p-product__modal-page-main',
-    //     // el: '.swiper-pagination-main',
-    //     type: 'fraction',
-    //   },
-    //   // navigation:{
-    //     //   prevEL:".p-product__modal-main-prev",
-    //     //   nextEl:".p-product__modal-main-next",
-    //     // },
-    //     navigation: {
-    //       nextEl: ".swiper-button-next",
-    //       prevEl: ".swiper-button-prev",
-    //     },
-    //   });
+        // htmlEl.classList.remove('scroll-stop');
+        // // html要素から「scroll-stop」というクラスを削除
+      } else {
+        // html要素に「on」というクラスがないとき
 
-  //     // //////swaiperの入れ子
-    // const sliderThumbnail = new Swiper(".slider-thumbnail", {
-    //   slidesPerView: 4, // サムネイルの枚数
-    // });
+        htmlEl.classList.add('on');
+        // html要素から「on」というクラスをつける
 
-    // const myModalSwiperSub = new Swiper(".p-swiper--subOne", {
-      //   spaceBetween: 100,
-      //   grabCursor: true,
-      //   nested: true,
-      //   pagination: {
-        //     el: '.p-swiper--subOne__page',
-        //     clickable: true,
-        //   },
-        //   navigation:{
-          //     nextEl:'.p-swiper--subOne__next',
-          //     prevEl:'.p-swiper--subOne__prev',
-          //   },
-          //   thumbs: {
-            //     swiper: swiperThumbnail,
-            //     // swiper: sliderThumbnail,
-            //   },
-            // });
-
-
-  //     // const swiperSub = new Swiper(".p-product__modal-swiper-sub",{
-  //       //   pagination: {
-  //         //     el: '.swiper-pagination-sub',
-  //         //     type: 'fraction',
-  //         //   },
-  //         //   navigation:{
-  //           //     prevEl:".p-product__modal-sub-prev",
-  //           //     nextEl:".p-product__modal-sub-next",
-  //           //   }
-  //           // });
-
-  //       // //////
-
-  //         // ////// コピペ改良
-  //           // const modal = document.getElementById("modal");
-  //         //   // モーダルを取得
-        
-  //           const openModalBtns = document.querySelectorAll(".product-content");
-  //         //   // product-content(モーダルを表示するもの)を全て取得
-        
-  //           // const closeModalBtns = document.querySelectorAll(".p-product__modal-cb");
-  //         //   // モーダルを閉じるボタン
-            
-        
-        
-          
-  //         //   // product-contentをクリックしたとき
-  //           openModalBtns.forEach((openModalBtn) => {
-
-  //             openModalBtn.addEventListener("click",() => {
-  //         //       // data-slide-indexに設定したスライド番号を取得
-  //               const modalIndex = openModalBtn.dataset.slideIndex;
-  //               swiperMain.slideTo(modalIndex);
-  //               // modal.classList.add("is-active");
-  //             });
-  //           });
-        
-  //         // //   // モーダルを閉じるボタンをクリックしたとき
-  //         //   closeModalBtns.forEach((closeModalBtn) => {
-  //         //     closeModalBtn.addEventListener("click",() => {
-  //         //       modal.classList.remove("is-active");
-  //         //     });
-  //         //   });
-  //         // コピペ改良ここまで
-  //       }
-
-
-        // //////モーダルのことを書く 書き直し
-  function settingModal(){
-    console.log('waa');
-    // クリックしたらモーダルが展開する箇所すべて
-    const openModal = document.querySelectorAll('.product-content');
-    // console.log(openModal);
-    // 配列で四つ取れている
-
-    // モーダルのエリアを取得
-    const modalArea = document.querySelector('.p-modal');
-
-    // モーダルの黒い背景の箇所を取得
-    const overlay = document.querySelector('.c-overay');
-
-    // モーダルの閉じるボタンを取得
-    const closeBtn = document.querySelector('.p-cb');
-
-    // product-content内をクリックしたら、is-showをつける
-    openModal.forEach(function(elm){
-        // forEachは与えられた関数を配列の各要素に対して一つずつ実行する。
-        // console.log(elm);
-      elm.addEventListener('click',function(){
-        // .product-contentをクリックした時に実行する
-        modalArea.classList.add('is-show');
-      });
-    });
-    
-    // モーダルの黒い背景の箇所をクリックしたら、is-showを外す
-      overlay.addEventListener('click',function(){
-        modalArea.classList.remove('is-show');
-      },false);
-
-    // モーダルの閉じるボタンを押した時に、is-showを外す
-    closeBtn.addEventListener('click',function(){
-      modalArea.classList.remove('is-show');
-    });
-    
-  }
-  // //////モーダルのことを書く 書き直し ここまで
-        
-  
-  // //////スライダーのことを書く 描き直し
-  function settingSwiper(){
-
-    // swiperのベース
-    const swiperMain =new Swiper(".p-swiper--main",{
-      pagination:{
-        el:".p-swiper--main__page",
-        type:'fraction',
-      },
-      navigation:{
-        nextEl:".p-swiper--main__next",
-        prevEl:".p-swiper--main__prev",
+        // htmlEl.classList.add('scroll-stop');
+        //  // html要素から「scroll-stop」というクラスをつける
       }
     });
-            
-    const swiperThumbnailOne = new Swiper(".p-thumbnail--one",{
-      slidesPerView: 4,
-      spaceBetween: 10,
-
-    });
-
-    const swiperSubOne = new Swiper(".p-swiper--subOne",{
-      pagination:{
-        el:".p-swiper--subOne__page",
-        type:'fraction',
-      },
-      navigation:{
-        nextEl:".p-swiper--subOne__next",
-        prevEl:".p-swiper--subOne__prev",
-      },
-      thumbs: {
-            swiper: swiperThumbnailOne,
-      },
-  });
-
-    const swiperThumbnailTwo = new Swiper(".p-thumbnail--two",{
-      slidesPerView: 4,
-      spaceBetween: 10,
-    });
-
-    const swiperSubTwo = new Swiper(".p-swiper--subTwo",{
-    pagination:{
-      el:".p-swiper--subTwo__page",
-      type:'fraction',
-    },
-    navigation:{
-      nextEl:".p-swiper--subTwo__next",
-      prevEl:".p-swiper--subTwo__prev",
-    },
-    thumbs: {
-      swiper: swiperThumbnailTwo,
-    },
-  });
-
-    const swiperThumbnailThree = new Swiper(".p-thumbnail--three",{
-      slidesPerView: 4,
-      spaceBetween: 10,
-    });
-
-    const swiperSubThree = new Swiper(".p-swiper--subThree",{
-    pagination:{
-      el:".p-swiper--subThree__page",
-      type:'fraction',
-    },
-    navigation:{
-      nextEl:".p-swiper--subThree__next",
-      prevEl:".p-swiper--subThree__prev",
-    },
-    thumbs: {
-      swiper: swiperThumbnailThree,
-    },
-  });
-
-    const swiperThumbnailFour = new Swiper(".p-thumbnail--four",{
-      slidesPerView: 4,
-      spaceBetween: 10,
-    });
-
-    const swiperSubFour = new Swiper(".p-swiper--subFour",{
-    pagination:{
-      el:".p-swiper--subFour__page",
-      type:'fraction',
-    },
-    navigation:{
-      nextEl:".p-swiper--subFour__next",
-      prevEl:".p-swiper--subFour__prev",
-    },
-    thumbs: {
-      swiper: swiperThumbnailFour,
-    },
-  });
-
-
-
-    // クリックした箇所を表示させる
-    // product-content(モーダルを表示するもの)を全て取得
-    const openModalBtns = document.querySelectorAll(".product-content");
-
-    openModalBtns.forEach((openModalBtn) => {
-      // product-contentをクリックしたとき
-      
-      openModalBtn.addEventListener("click",() => {
-        const modalIndex = openModalBtn.dataset.slideIndex;
-          // data-slide-indexに設定したスライド番号を取得
-        swiperMain.slideTo(modalIndex,0);
-          // 該当する番号へスライドさせる 
-      });
-    });        
   }
-  
-  // //////スライダーのことを書く 描き直しここまで
 
-          
+  // モーダル関連処理一式
+  function modal() {
+    const modalEl = document.querySelector('[data-modal]');
 
-    
+    if (!modalEl) {
+      return;
+    }
+
+    let scrolled = 0; // スクロール値を保存
+    let offset = 0; // サムネイル下オフセット値を保存
+
+    // メインカルーセル
+    const carouselEl = modalEl.querySelector('[data-carousel]');
+    const carouselMainEl = carouselEl.querySelector('[data-main]');
+    const carousel = new Swiper(carouselMainEl, {
+      modules: [Navigation, Pagination],
+      wrapperClass: 'carousel-wrapper',
+      slideClass: 'carousel-slide',
+      slidesPerView: 1,
+      allowTouchMove: false,
+      loop: true,
+      navigation: {
+        prevEl: carouselEl.querySelector('[data-nav-prev]'),
+        nextEl: carouselEl.querySelector('[data-nav-next]'),
+      },
+      pagination: {
+        el: carouselEl.querySelector('[data-pagination]'),
+        type: 'fraction',
+      },
+    });
+
+    // パネル内カルーセル
+    const panelsElms = modalEl.querySelectorAll('[data-panel]');
+    panelsElms.forEach((panelEl) => {
+      const imagesEl = panelEl.querySelector('[data-images]');
+
+      const navEl = panelEl.querySelector('[data-nav]');
+      const thumbsEl = navEl.querySelector('[data-thumbs]');
+
+      const nav = new Swiper(thumbsEl, {
+        slidesPerView: 4,
+        slideToClickedSlide: true,
+        spaceBetween: 10,
+      });
+
+      // eslint-disable-next-line no-new
+      new Swiper(imagesEl, {
+        modules: [Navigation, Pagination, Thumbs],
+        slidesPerView: 1,
+        loop: true,
+        navigation: {
+          prevEl: imagesEl.parentElement.querySelector('[data-image-prev]'),
+          nextEl: imagesEl.parentElement.querySelector('[data-image-next]'),
+        },
+        pagination: {
+          el: imagesEl.parentElement.querySelector('[data-image-pagination]'),
+          type: 'fraction',
+        },
+        thumbs: {
+          swiper: nav,
+        },
+      });
+
+      const onResizePanel = () => {
+        offset = thumbsEl.clientHeight;
+        console.log(offset);
+
+        carouselMainEl.style.paddingBottom = `${offset / 2}px`;
+        // carouselMainEl.style.marginTop = `${-offset / 2}px`;
+
+        navEl.style.bottom = `${-offset / 2}px`;
+      };
+      onResizePanel();
+
+      window.addEventListener(EVENTS.RESIZE, debounce(onResizePanel, 200));
+    });
+
+    // モーダル開閉
+    const openElms = document.querySelectorAll('[data-slide-index]');
+    const closeElms = document.querySelectorAll('[data-modal-close]');
+    openElms.forEach((openEl) => {
+      openEl.addEventListener(EVENTS.CLICK, (e) => {
+        e.preventDefault();
+        if (modalEl.getAttribute('aria-hidden') === 'true') {
+          scrolled = window.scrollY;
+
+          carousel.slideTo(openEl.dataset.slideIndex, 0);
+          gsap.to(modalEl, {
+            autoAlpha: 1,
+            onComplete: () => {
+              document.body.style.overflow = 'hidden';
+              modalEl.setAttribute('aria-hidden', 'false');
+            },
+          });
+        }
+      });
+    });
+    closeElms.forEach((closeElm) => {
+      closeElm.addEventListener(EVENTS.CLICK, (e) => {
+        e.preventDefault();
+        if (modalEl.getAttribute('aria-hidden') === 'false') {
+          document.body.style.overflow = '';
+          window.scrollTo(0, scrolled);
+          gsap.to(modalEl, {
+            autoAlpha: 0,
+            onComplete: () => {
+              modalEl.setAttribute('aria-hidden', 'true');
+            },
+          });
+        }
+      });
+    });
+  }
+
   /// /////////////////////////////////////////////////////// Resize
   // ccc = 要素高さ;
   function onResize() {
     // キービジュアルの高さをとる
-
     // ccc = 要素高さ;
-
     // スクロールの数値をとる
-
     // キービジュアルの高さを越えたらクラスをつける
-
-    // 
-
+    //
   }
   window.addEventListener(EVENTS.RESIZE, debounce(onResize, 200));
 
@@ -401,16 +220,11 @@ import EVENTS from '~/constants/event-names';
     // development
     if (process.env.NODE_ENV === 'development') {
       performanceMonitor();
-
-      
     }
 
     menuBtn();
 
-    settingSwiper();
-
-    settingModal();
-    
+    modal();
   }
   window.addEventListener(EVENTS.LOAD, onLoad);
 })();
@@ -423,136 +237,127 @@ import EVENTS from '~/constants/event-names';
 
 // });
 
-$(function(){
+$(function () {
   // htmlを読み込んでから
 
   // 追従メニュー==========
-  function addFixed(){
+  function addFixed() {
     // 関数宣言
 
-    let mvHeight = $('.mv').outerHeight();
+    const mvHeight = $('.mv').outerHeight();
     // キービジュアルの高さをとる
     // console.log(mvHeight);
-    
+
     let widthSize = $(window).width();
     // 画面幅の数値をとる
     // console.log(widthSize);
 
-
     // 間違っているゾーン
     // if (width => 768){
-      //        ↑不等号の書き方が違う
-      // if(window.matchMedia("(min-width: 768px)").matches){
-        //     // 768px以上の時に行う。
-        
-        //     $(window).scroll(function(){
-          //       // スクロールした時
-          //       if ($(this).scrollTop() > mvHeight){
-                       // 
-            //         // キービジュアルの高さを越えたら
-            //         $('.header').addClass('fixed');
-            //         // クラスをつける
-            //       }else{
-              //         // キービジュアルの高さを越えていなかったら
-              //         $('.header').removeClass('fixed');
-              //         // クラスを外す
-              //       }
-              //     });
-              //   }
-        // $(window).scrollの位置がふさわしくない
-        //  $(window).scrollが一度監視状態になるとずっと監視状態になってしまう
-      
-        function fixedClass(){
-          let scrollAmount = $(window).scrollTop();
-          // console.log(scrollAmount);
-          if (widthSize > 767){
-            // もしwidthSizeが767以上だったら行う
-            // console.log('pc');
-            
-            if (scrollAmount > mvHeight ){
-              //もしスクロールした量がmvHeightを超えた(mvHeightより下のところを表示している時)時に行う
-              
-              $('.header').addClass('fixed');
-              // .headerのところに「fixed」というクラスをつける
-              
-            }else{
-              //もしスクロールした量がmvHeightを超ていない(mvHeightより上のところを表示している)時に行う
-              
-              $('.header').removeClass('fixed');
-              // .headerのところから「fixed」というクラスを外す
-            }
-            
-          }else{
-            if($('.header').hasClass('fixed')){
-              // .headerのところにもし「fixed」クラスがあったら
+    //        ↑不等号の書き方が違う
+    // if(window.matchMedia("(min-width: 768px)").matches){
+    //     // 768px以上の時に行う。
 
-              $('.header').removeClass('fixed');
-              // .headerのところから「fixed」クラスを外す
-            }
-          }
+    //     $(window).scroll(function(){
+    //       // スクロールした時
+    //       if ($(this).scrollTop() > mvHeight){
+    //
+    //         // キービジュアルの高さを越えたら
+    //         $('.header').addClass('fixed');
+    //         // クラスをつける
+    //       }else{
+    //         // キービジュアルの高さを越えていなかったら
+    //         $('.header').removeClass('fixed');
+    //         // クラスを外す
+    //       }
+    //     });
+    //   }
+    // $(window).scrollの位置がふさわしくない
+    //  $(window).scrollが一度監視状態になるとずっと監視状態になってしまう
 
+    function fixedClass() {
+      const scrollAmount = $(window).scrollTop();
+      // console.log(scrollAmount);
+      if (widthSize > 767) {
+        // もしwidthSizeが767以上だったら行う
+        // console.log('pc');
+
+        if (scrollAmount > mvHeight) {
+          // もしスクロールした量がmvHeightを超えた(mvHeightより下のところを表示している時)時に行う
+
+          $('.header').addClass('fixed');
+          // .headerのところに「fixed」というクラスをつける
+        } else {
+          // もしスクロールした量がmvHeightを超ていない(mvHeightより上のところを表示している)時に行う
+
+          $('.header').removeClass('fixed');
+          // .headerのところから「fixed」というクラスを外す
         }
+      } else if ($('.header').hasClass('fixed')) {
+        // .headerのところにもし「fixed」クラスがあったら
 
-       $(window).resize(function(){
-            // ウィンドウが変更されるごとに関数を実行
-            widthSize = $(window).width();
-            // 画面幅の数値をとる
-            console.log(widthSize);
-        });
-
-      $(window).scroll(function(){
-        fixedClass();
-
-      });
-
-      fixedClass();
-
+        $('.header').removeClass('fixed');
+        // .headerのところから「fixed」クラスを外す
+      }
     }
 
-    addFixed();
-
-    
-    // smoothスクロール==========
-    $('a[href^="#"]').click(function(){
-      // #で始まるa要素をクリックいた場合に処理
-      // console.log('a','click');
-
-      const htmlEl = document.documentElement;
-      // 取得したドキュメントのルート(最上位)の要素、すなわちすなわちhtml要素を代入
-
-      let positionAdjust = $('.header-wrapper').outerHeight();
-      // 移動先の調整。ここの数でずらせる。ヘッダー分ずらしたいからヘッダーの高さを取ってくる
-      // console.log(positionAdjust);
-
-      let scrollSpeed = 400;
-      // スクロールの速度(ミリ秒)
-
-      let getHref = $(this).attr("href");
-      // アンカーの値を取得。リンク先(href)を取得して代入
-      // console.log(getHref); // #wrapperが入っていたら成功
-
-      let landingTarget =$(getHref == '#' || getHref == "" ? 'html' : getHref);
-      // 移動先を取得。リンク先(herf)のidを探して、targetに代入
-      // console.log(aTarget);
-
-      let landingPosition = landingTarget.offset().top - positionAdjust;
-      // 移動先を調整。idの要素の位置をoffset()で取得してpositionに代入
-      // console.log(landingPosition);
-
-      $('body,html').animate({scrollTop:landingPosition}, scrollSpeed, 'swing');
-      // スムーススクロール。linear(等速)またはswing(変速)
-
-      if(htmlEl.classList.contains('on')){
-        // html要素に「on」というクラスがあるとき
-  
-        htmlEl.classList.remove('on');
-        // html要素から「on」というクラスを削除
-      }
-
-      return false;
+    $(window).resize(function () {
+      // ウィンドウが変更されるごとに関数を実行
+      widthSize = $(window).width();
+      // 画面幅の数値をとる
+      console.log(widthSize);
     });
 
+    $(window).scroll(function () {
+      fixedClass();
+    });
+
+    fixedClass();
+  }
+
+  addFixed();
+
+  // smoothスクロール==========
+  $('a[href^="#"]').click(function () {
+    // #で始まるa要素をクリックいた場合に処理
+    // console.log('a','click');
+
+    const htmlEl = document.documentElement;
+    // 取得したドキュメントのルート(最上位)の要素、すなわちすなわちhtml要素を代入
+
+    const positionAdjust = $('.header-wrapper').outerHeight();
+    // 移動先の調整。ここの数でずらせる。ヘッダー分ずらしたいからヘッダーの高さを取ってくる
+    // console.log(positionAdjust);
+
+    const scrollSpeed = 400;
+    // スクロールの速度(ミリ秒)
+
+    const getHref = $(this).attr('href');
+    // アンカーの値を取得。リンク先(href)を取得して代入
+    // console.log(getHref); // #wrapperが入っていたら成功
+
+    const landingTarget = $(getHref == '#' || getHref == '' ? 'html' : getHref);
+    // 移動先を取得。リンク先(herf)のidを探して、targetに代入
+    // console.log(aTarget);
+
+    const landingPosition = landingTarget.offset().top - positionAdjust;
+    // 移動先を調整。idの要素の位置をoffset()で取得してpositionに代入
+    // console.log(landingPosition);
+
+    $('body,html').animate(
+      { scrollTop: landingPosition },
+      scrollSpeed,
+      'swing'
+    );
+    // スムーススクロール。linear(等速)またはswing(変速)
+
+    if (htmlEl.classList.contains('on')) {
+      // html要素に「on」というクラスがあるとき
+
+      htmlEl.classList.remove('on');
+      // html要素から「on」というクラスを削除
+    }
+
+    return false;
+  });
 });
-
-
-

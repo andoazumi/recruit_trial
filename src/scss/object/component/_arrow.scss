@@ -1,0 +1,32 @@
+.c-arrow {
+  $this: &;
+
+  position: relative;
+  display: block;
+  display: flex;
+  width: 1em;
+  height: 2em;
+
+  &::before,
+  &::after {
+    position: absolute;
+    right: 0;
+    display: block;
+    width: sqrt(pow(1, 2) * 2) * 1em;
+    height: 1px;
+    content: '';
+    background: currentColor;
+  }
+
+  &::before {
+    top: 0;
+    transform: rotate(-45deg);
+    transform-origin: top right;
+  }
+
+  &::after {
+    bottom: 0;
+    transform: rotate(45deg);
+    transform-origin: bottom right;
+  }
+}

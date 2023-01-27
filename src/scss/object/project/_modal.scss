@@ -1,0 +1,89 @@
+.p-modal {
+  $this: &;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  opacity: 0;
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    background: rgba(#000, 0.9);
+  }
+
+  &__container {
+    position: relative;
+    z-index: 1;
+
+    @include pc {
+      margin: 15rem 5rem;
+    }
+
+    @include sp {
+      margin: 6rem 0;
+    }
+  }
+
+  &__contents {
+    @include pc {
+      width: unquote('max(66.8rem, calc(1200vw * 100 / 1440))');
+      max-width: 1200px;
+    }
+
+    @include sp {
+      width: 100%;
+      max-width: 100vw;
+    }
+  }
+
+  &__close {
+    position: absolute;
+    width: 1em;
+    height: 1em;
+    overflow: hidden;
+
+    @include pc {
+      top: 4rem;
+      right: 4rem;
+      font-size: 2.5rem;
+    }
+
+    @include sp {
+      top: 2rem;
+      right: 2rem;
+      font-size: 1.8rem;
+    }
+
+    &::before,
+    &::after {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      display: block;
+      width: sqrt(pow(1, 2) * 2) * 1em;
+      height: 1px;
+      content: '';
+      background: #fff;
+    }
+
+    &::before {
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    &::after {
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+  }
+}
